@@ -1,0 +1,23 @@
+.dishes_section {
+  margin-top: 55px;
+  height: 729px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  gap: 40px;
+  margin-bottom: 97px;
+  h2{
+    margin-bottom: 50px;
+  }
+}
+
+.dishes_card {
+  margin-top: -50px;
+  width: 82.25%;
+
+  justify-content: space-between;
+  align-items: center;
+  @include mobile{
+    overflow-x: scroll;
+  }
+}

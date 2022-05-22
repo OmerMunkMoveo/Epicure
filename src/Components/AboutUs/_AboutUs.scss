@@ -1,0 +1,30 @@
+.about_us_section {
+  background-color: #FAFAFA;
+  height: 469px;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  padding-left: 8.85%;
+  padding-right: 8.85%;
+  margin-top: -10px;
+
+  .about_us_content {
+    margin-top: -63px;
+    justify-content: space-between;
+
+    .body_text {
+      width: 50%;
+    }
+
+  }
+
+  .about_us_links {
+    width: 32%;
+    justify-content: space-between;
+    img{
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}

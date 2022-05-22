@@ -1,0 +1,108 @@
+$button-hover-background: #515151;
+
+@mixin button($background-color, $font-color, $show-image) {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 2.67px;
+  color: $font-color;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: $background-color;
+  width: 206px;
+  height: 48px;
+  padding: 5px 10px;
+  gap: 10px;
+  border: 1px $primary-color1 solid;
+
+
+  .lock_icon {
+    position: relative;
+    display: $show-image;
+
+    .lock {
+      display: $show-image;
+    }
+
+    .circle {
+      display: $show-image;
+      position: absolute;
+      left: 29.37%;
+      right: 42.42%;
+      top: 56.97%;
+      bottom: 26.22%;
+    }
+  }
+  &:hover {
+    background-color: $button-hover-background;
+    cursor: pointer;
+  }
+
+}
+
+
+.primary_button {
+  @include button($primary-color1, white, block)
+}
+
+.primary_button_lock {
+  @include button($primary-color1, white, none)
+}
+
+
+.secondary_button {
+  @include button(white, $primary-color1, none);
+  padding: 5px 0;
+
+
+  &:hover {
+    background-color: $primary-color1;
+    color: white;
+  }
+}
+
+
+
+.text_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  //width: 226px;
+  //height: 35px;
+  background-color: transparent;
+  gap: 12px;
+  padding: 0;
+  border: none;
+  &:hover{
+    cursor: pointer;
+  }
+
+
+  .text {
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    @include mobile{
+      font-size: 16px;
+    }
+  }
+  .arrow {
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    background-color: $primary-color1;
+
+  }
+}
+
+
+
+
+

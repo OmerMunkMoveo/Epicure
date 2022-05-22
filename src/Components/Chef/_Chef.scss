@@ -1,0 +1,58 @@
+.chef {
+  display: flex;
+  background-color: black;
+  width: 478px;
+  height: 372px;
+  flex-direction: column-reverse;
+  align-items: center;
+  img{
+    width: 380px;
+    height: 357px;
+  }
+  @include mobile {
+    width: 335px;
+    height: 262px;
+  }
+
+  .chef_name {
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 78px;
+    position: absolute;
+    display: flex;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 2.67px;
+    width: inherit;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    @include mobile {
+      height: 47px;
+      font-size: 18px;
+    }
+  }
+}
+
+.chef_of_the_week_section {
+  margin-top: -50px;
+  justify-content: space-between;
+  align-items: center;
+  width: 82%;
+  margin-left: 8.85%;
+
+}
+.chef_of_the_week_info {
+  margin-top: 15px;
+  justify-content: space-between;
+  .body_text{
+    width: 55%;
+  }
+  .chef_of_the_week_image{
+    background-color: black;
+    width: 478px;
+    height: 372px;
+  }
+}
+
+
+

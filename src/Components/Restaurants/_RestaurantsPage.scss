@@ -1,0 +1,72 @@
+.restaurants_page {
+  margin-top: 112px;
+  align-items: center;
+  //justify-content: center;
+}
+
+.restaurants_view {
+  display: flex;
+  flex-direction: row;
+  width: 36%;
+  justify-content: space-between;
+
+  a {
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 1.92px;
+    color: black;
+
+    .active_view {
+      font-weight: 1000;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.restaurants_filter {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  background-color: #FAFAFA;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 0 33%;
+  height: 60px;
+
+  a {
+    font-weight: 200;
+    font-size: 18px;
+    text-transform: capitalize;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+
+.all_restaurants {
+  padding: 0;
+  margin-left: 6%;
+  margin-right: 4%;
+  display: flex;
+  list-style-type: none;
+  overflow: hidden;
+  column-count: 3;
+
+  li {
+    list-style: none;
+    float: left;
+    padding-right: 1.5%;
+    margin-bottom: 40px ;
+  }
+}
+

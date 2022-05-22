@@ -1,0 +1,90 @@
+@mixin dishContent($dishInfoHeight, $dishPrimaryFontSize, $dishSecondaryFontSize, $dishSecondaryFontPadding, $dishInfoLine){
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  .dish_info {
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F4EA;
+    width: inherit;
+    height: $dishInfoHeight;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    padding: 24px 0 8px;
+    gap: 8px;
+    .dish_text{
+      display: flex;
+      flex-direction: column;
+      .dish_text_primary {
+        text-transform: capitalize;
+        font-size: $dishPrimaryFontSize;
+        letter-spacing: 2.67px;
+        font-weight: 400;
+        padding: 0 55px 20px 55px;
+        text-align: center;
+      }
+      .dish_text_secondary {
+        margin-top: -15px;
+        text-align: center;
+        font-size: $dishSecondaryFontSize;
+        letter-spacing: 1.97px;
+        font-weight: 200;
+        padding: $dishSecondaryFontPadding;
+      }
+    }
+    .dish_price {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      width: 287px;
+      height: 30px;
+      .dish_text_price {
+        display: flex;
+        font-size: $dishSecondaryFontSize;
+        letter-spacing: 1.97px;
+        font-weight: 200;
+        gap: 4px;
+      }
+      .dish_line {
+        width: $dishInfoLine;
+        height: 0;
+        border: 0.5px solid #979797;
+      }
+    }
+  }
+}
+.dish_big {
+  width: 360px;
+  height: 645px;
+  @include dishContent(364px, 40px, 24px, 0 30px, 112px);
+}
+.dish_small {
+  width: 272px;
+  height: 413px;
+  @include dishContent(240.27px, 24px, 20px, 0 15px 20px 15px, 82.5px);
+}
+
+.dish_signature{
+  width: 380px;
+  height: 645px;
+  @include dishContent(364px, 40px, 24px, 0 30px, 112px);
+
+  //.dish_image{
+  //  width: 380px;
+  //  height: 306px;
+  //  object-fit: contain;
+  //}
+}
+
+
+.dish_props{
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  img{
+    width: 40px;
+  }
+}
+

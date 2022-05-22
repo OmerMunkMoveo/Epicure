@@ -1,0 +1,33 @@
+.side_cart{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  justify-self: stretch;
+  right: 0;
+  top: 0;
+  width: 497px;
+  height: 586px;
+  padding: 0 0 44px 0;
+  img{
+    position: absolute;
+    left: 224px;
+    top:243px;
+    width: 49px ;
+    opacity: 0.5;
+  }
+  p{
+    position: absolute;
+    left: 188px;
+    bottom: 224px;
+    font-weight: 200;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1.97px;
+    text-transform: uppercase;
+    width: 121px;
+    opacity: 0.5;
+
+  }
+}

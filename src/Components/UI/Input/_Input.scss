@@ -1,0 +1,250 @@
+$border-button-width: 0.5px;
+.search_bar{
+
+  margin-right: -45px;
+  input[type="text"]{
+    box-sizing: border-box;
+    display: flex;
+    width:410px;
+    align-items: center;
+    height: 41px;
+    border-radius: 4px;
+    padding: 6px 20px;
+    border: 0.5px solid black;
+    font-size: 18px;
+    letter-spacing: 1.29px;
+    font-weight: 200;
+  }
+
+}
+
+.header_search{
+  width: 149%;
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+  img{
+    position: absolute;
+    margin-left: 11% ;
+    margin-top: 9px;
+  }
+  @include mobile{
+    margin-top: -50px;
+  }
+
+  label{
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  input[type="text"]{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    height: 48px;
+    //padding: 6px 50px;
+    //width: 430px;
+    padding: 6px 0;
+    padding-left: 7.25%;
+    width: 64.3%;
+    margin-left: 14%;
+    background-color: transparent;
+    border: 0.5px solid black;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: 200;
+    &::placeholder{
+      text-align: center;
+    }
+    @include mobile{
+      width: 280px;
+      height: 30px;
+      padding: 6px 12px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+
+  }
+}
+
+.text_input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0;
+  gap: 8px;
+  height: 52px;
+  width: 360px;
+
+  &:hover {
+    background-color: #FAFAFA;
+  }
+
+  label {
+    //display: none;
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 1.97px;
+    text-align: center;
+    color: $primary-color2;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    font-weight: 200;
+    letter-spacing: 1.97px;
+    font-size: 16px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 0.5px solid black;
+
+    &:focus {
+      border-bottom: 1.5px solid black;
+
+    }
+  }
+}
+
+.radio {
+  color: black;
+}
+
+@mixin checked_input() {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.check_box {
+  @include checked_input();
+
+  input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .checkmark {
+      background-color: #ffffff;
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+
+  input ~ .checkmark {
+    border: 1px solid black;
+  }
+
+  &:hover input ~ .checkmark {
+    background-color: #dedede;
+    transition-duration: 0.1s;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #ffffff;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 6px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid black;
+      border-width: 0 1.5px 1.5px 0;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+
+/* The container */
+.radio {
+  @include checked_input();
+  //display: block;
+  //position: relative;
+  //padding-left: 35px;
+  //margin-bottom: 12px;
+  //cursor: pointer;
+  //font-size: 22px;
+  //-webkit-user-select: none;
+  //-moz-user-select: none;
+  //-ms-user-select: none;
+  //user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio input {
+  //position: absolute;
+  opacity: 0;
+  cursor: pointer;
+
+}
+
+/* Create a custom radio button */
+.radio_check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 1px solid black;
+
+}
+
+/* On mouse-over, add a grey background color */
+.radio:hover input ~ .radio_check {
+  background-color: #e3e3e3;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio input:checked ~ .radio_check {
+  background-color: white;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio_check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio input:checked ~ .radio_check:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio .radio_check:after {
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: black;
+}

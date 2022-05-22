@@ -1,0 +1,55 @@
+$primary-color1: #000000;
+$primary-color2: #979797;
+$secondary-color1: #F9F4EA;
+$secondary-color2: #E19D1A;
+$secondary-color3: #FAFAFA;
+
+@mixin mobile{
+  @media screen and (max-width: 600px) {@content}
+};
+
+.header {
+
+  h1 {
+    font-weight: 200;
+    font-size: 32px;
+    letter-spacing: 1.97px;
+    @include mobile{
+      font-size: 24px;
+    }
+  }
+
+  h2 {
+    font-weight: 200;
+    font-size: 30px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    @include mobile{
+      font-size: 16px;
+    }
+  }
+
+  h3{
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 2.67px;
+    @include mobile{
+      font-size: 18px;
+    }
+  }
+}
+
+.body_text{
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 1.97px;
+  @include mobile{
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
