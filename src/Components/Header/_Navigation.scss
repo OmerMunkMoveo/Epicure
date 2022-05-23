@@ -8,16 +8,20 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-left: 8.819444444%;
-  width: 82.36111111%;
+  //margin-left: 8.819444444%;
+  //width: 82.36111111%;
   margin-left: 8.25%;
   width: 83.5%;
 
   @include mobile{
-    width: 90%;
-    margin-left: 5%;
+    box-sizing: border-box;
+    height: 46px;
+    width: 100%;
+    top: 0;
+    margin-left: 0;
+    padding-left: 6.4%;
+    padding-right: 6.4%;
   }
-
 
 
   NavLink, a {
@@ -50,6 +54,8 @@
         margin-right: 15px;
         @include mobile{
           margin: 0;
+          width: 33px;
+          height: 33px;
         }
       }
     }
@@ -83,6 +89,12 @@
 
     NavLink, a{
       margin-left: 1%;
+    }
+    @include mobile{
+      img{
+        width: 20px;
+        height: 20px;
+      }
     }
 
 
@@ -122,19 +134,18 @@
 
 
 .mobile_overlay_menu{
-
   display: none;
   height: 0%;
   transition: 0.5s;
-
-
   @include mobile{
+
     opacity: 0;
-    z-index: -2;
-    transition: 0.5s;
-    padding-top: 50px;
-    top: 0;
-    padding-left: 30px;
+    //z-index: -2;
+    transition-property: height, opacity;
+    transition-duration: 0.5s;
+    top:0;
+    padding-top: 15px;
+    padding-left:5.3%;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
@@ -142,9 +153,14 @@
     height: 0%;
     width: 100%;
     background-color: rgb(255, 255, 255);
+    img{
+      margin-left: 1.1%;
+    }
     NavLink, a{
+      text-decoration: none;
+      color: inherit;
       text-transform: capitalize;
-      font-size: 32px;
+      font-size: 18px;
       font-weight: 200;
       letter-spacing: 1.92px;
       &:hover{
@@ -160,10 +176,9 @@
     }
 
     .mobile_menu_line{
-      margin-left: -30px;
+      margin-left: -5.3%;
       height: 0;
-      border: 1px solid black;
-      color:black;
+      border: 1px solid #F2F2F2;
       width: 100%;
     }
   }

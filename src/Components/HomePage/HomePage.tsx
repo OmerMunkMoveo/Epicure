@@ -12,10 +12,10 @@ const HomePage = () =>{
         <>
             <Header></Header>
             <Restaurants group="most popular" homePage></Restaurants>
-            <Dishes></Dishes>
-            <Icons></Icons>
-            <ChefOfTheWeek chef="yossi shitrit"></ChefOfTheWeek>
-            <AboutUs></AboutUs>
+            {/*<Dishes></Dishes>*/}
+            {/*<Icons></Icons>*/}
+            {/*<ChefOfTheWeek chef="yossi shitrit"></ChefOfTheWeek>*/}
+            {/*<AboutUs></AboutUs>*/}
         </>
     )
 }

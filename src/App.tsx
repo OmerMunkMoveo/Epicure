@@ -4,12 +4,6 @@ import './Styles/Style.css'
 
 import Navigation from "./Components/Header/Navigation";
 import Footer from "./Components/Footer/Footer";
-import Header from "./Components/Header/Header";
-import Restaurants from "./Components/Restaurants/Restaurants";
-import Dishes from "./Components/Dishes/Dishes";
-import Icons from "./Components/Icons/Icons";
-import ChefOfTheWeek from "./Components/Chef/ChefOfTheWeek";
-import AboutUs from "./Components/AboutUs/AboutUs";
 import SideCart from "./Components/Cart/SideCart";
 import {Route, Routes} from "react-router-dom";
 import HomePage from "./Components/HomePage/HomePage";

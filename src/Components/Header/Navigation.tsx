@@ -21,9 +21,11 @@ const Navigation = (props:any) => {
                 <div className="left_nav">
                     <img className='mobile_menu_button' src={MOBILE_MENU} alt='mobile menu'
                          onClick={() => {
-                             mobileMenuRef.current.style.height = '50%'
-                             mobileMenuRef.current.style.zIndex = '2'
-                             mobileMenuRef.current.style.opacity = '1'
+                             mobileMenuRef.current.style.height = '50%';
+                             mobileMenuRef.current.style.zIndex = '11';
+                             mobileMenuRef.current.style.opacity = '1';
+                             mobileMenuRef.current.style.color = 'black';
+
                          }}/>
                     <NavLink to='' className="main_link">
                         <img src={LOGO} alt="epicure logo"/>
@@ -62,9 +64,10 @@ const Navigation = (props:any) => {
 
                 <nav ref={mobileMenuRef} className='mobile_overlay_menu'>
                     <img onClick={() => {
-                        mobileMenuRef.current.style.height = '0%'
-                        mobileMenuRef.current.style.zIndex = '-1'
-                        mobileMenuRef.current.style.opacity = '0'
+                        mobileMenuRef.current.style.height = '0';
+                        mobileMenuRef.current.style.zIndex = '0';
+                        mobileMenuRef.current.style.opacity = '0';
+                        mobileMenuRef.current.style.color = 'white';
                     }} src={CLOSE} alt="close mobile menu" width='20px'/>
                     <div className='mobile_menu_section'>
                         <a><NavLink to='/restaurants'>restaurants</NavLink> </a>
