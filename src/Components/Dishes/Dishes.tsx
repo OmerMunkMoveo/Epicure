@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import Dish from "./Dish";
 import Card from "../UI/Card/Card";
 import axios from "axios"
+import Button from "../UI/Button/Button";
 
 const Dishes = () => {
     const [dishes, setDishes] = useState<any>();
@@ -28,7 +29,7 @@ const Dishes = () => {
 
 
     return (
-        <section>
+        <section style={{width:'100%'}}>
             <Card className = "card column dishes_section">
                 <div className="header">
                     <h2>
@@ -38,6 +39,9 @@ const Dishes = () => {
                 <Card className="card row dishes_card">
                     {dishes}
                 </Card>
+                <div className="all_button">
+                    <Button className="text_button">all restaurants</Button>
+                </div>
 
             </Card>
         </section>

@@ -1,10 +1,10 @@
 import React from "react"
 import Modal from "../UI/Modal/Modal";
 import Button from "../UI/Button/Button";
-import Card from "../UI/Card/Card";
 import CART from "../../Images/Icons/cart.svg"
 
 const SideCart = (props: any) => {
+
 
     return (
         <>

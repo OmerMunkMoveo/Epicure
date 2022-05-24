@@ -4,20 +4,39 @@
   justify-content: space-between;
   align-items: center;
   padding: 0;
-  gap: 40px;
+  //gap: 40px;
   margin-bottom: 97px;
   h2{
     margin-bottom: 50px;
   }
+  @include mobile{
+    align-items: flex-start;
+    h2{
+      display: flex;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      height: 35px;
+      align-items: center;
+    }
+    height: 100%;
+    margin: 48px 0 0 0;
+  }
+  .all_button{
+    height: 35px;
+    margin-top: 16px;
+    display: none;
+    @include mobile{
+      display: flex;
+    }
+  }
 }
 
 .dishes_card {
-  margin-top: -50px;
   width: 82.25%;
-
   justify-content: space-between;
   align-items: center;
   @include mobile{
     overflow-x: scroll;
+    width: 100%;
   }
 }

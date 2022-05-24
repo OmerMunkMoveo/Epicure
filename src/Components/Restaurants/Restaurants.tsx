@@ -3,6 +3,7 @@ import Restaurant from "./Restaurant";
 import Card from "../UI/Card/Card";
 import axios from "axios";
 import Button from "../UI/Button/Button";
+
 const epochMonth: number = 86400000;
 
 const Restaurants = (props: any) => {
@@ -12,10 +13,10 @@ const Restaurants = (props: any) => {
         axios.get("MockData/AllRestaurants.json").then((res: any) => {
             const result = res.data
             const rendered = Object.keys(result).map((keyName: any, i: any) => {
-                    return ( <li>
+                return (<li>
                         <Restaurant key={i} data={result[keyName]}
                                     className="restaurant_chef"></Restaurant></li>
-                    )
+                )
             })
             setRestaurants(rendered)
         })
@@ -24,8 +25,8 @@ const Restaurants = (props: any) => {
         axios.get("MockData/AllRestaurants.json").then((res: any) => {
             const result = res.data
             const rendered = Object.keys(result).map((keyName: any, i: any) => {
-                if((now - epochMonth) < Date.parse(result[keyName].opened)){
-                    return ( <li>
+                if ((now - epochMonth) < Date.parse(result[keyName].opened)) {
+                    return (<li>
                             <Restaurant key={i} data={result[keyName]}
                                         className="restaurant_chef"></Restaurant></li>
                     )
@@ -40,8 +41,8 @@ const Restaurants = (props: any) => {
             const rendered = Object.keys(result).map((keyName: any, i: any) => {
                 if (result[keyName].popular === "true") {
                     return (
-                       <li> <Restaurant key={i} data={result[keyName]}
-                                    className="restaurant_chef"></Restaurant></li>
+                        <li><Restaurant key={i} data={result[keyName]}
+                                        className="restaurant_chef"></Restaurant></li>
                     )
                 }
             })
@@ -67,9 +68,9 @@ const Restaurants = (props: any) => {
             getPopularRestaurant();
         } else if (props.chef) {
             getChefRestaurants();
-        } else if (props.group === 'all'){
+        } else if (props.group === 'all') {
             getAllRestaurant();
-        } else if (props.group === "new"){
+        } else if (props.group === "new") {
             getNewRestaurant();
         }
     }, [props.group, props.chef])
@@ -79,16 +80,16 @@ const Restaurants = (props: any) => {
                 className={`card column ${props.homePage ? 'restaurants_section' : 'chef_of_the_week_restaurants_section'}`}>
                 <div className="header">
                     <h2>
-                        {props.homePage ? 'popular restaurants in epicure' : (props.chef?
-                             `${props.chef?.name}'s restaurants` : '')}
+                        {props.homePage ? 'popular restaurants in epicure' : (props.chef ?
+                            `${props.chef?.name}'s restaurants` : '')}
                     </h2>
                 </div>
                 <Card
-                    className={`card row ${props.homePage ? 'restaurants_card' : 'chef_of_the_week_restaurants_card'} ${props.className}`}>
-                    {props.homePage || props.chef?restaurants:<ul>{restaurants}</ul>}
+                    className={`card row ${props.homePage ? 'restaurants_card' : 'chef_of_the_week_restaurants_card'}`}>
+                    {props.homePage || props.chef ? restaurants : <ul>{restaurants}</ul>}
 
                 </Card>
-                {props.homePage && <div style={{display: 'flex', justifyContent: 'flex-end', width: '100%'}}>
+                {(props.homePage || props.chef) && <div className="all_button">
                     <Button className="text_button">all restaurants</Button>
                 </div>}
             </Card>

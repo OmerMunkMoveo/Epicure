@@ -25,6 +25,8 @@ const Navigation = (props:any) => {
                              mobileMenuRef.current.style.zIndex = '11';
                              mobileMenuRef.current.style.opacity = '1';
                              mobileMenuRef.current.style.color = 'black';
+                             mobileMenuRef.current.style.pointerEvents = 'auto';
+
 
                          }}/>
                     <NavLink to='' className="main_link">
@@ -68,6 +70,7 @@ const Navigation = (props:any) => {
                         mobileMenuRef.current.style.zIndex = '0';
                         mobileMenuRef.current.style.opacity = '0';
                         mobileMenuRef.current.style.color = 'white';
+                        mobileMenuRef.current.style.pointerEvents = 'none';
                     }} src={CLOSE} alt="close mobile menu" width='20px'/>
                     <div className='mobile_menu_section'>
                         <a><NavLink to='/restaurants'>restaurants</NavLink> </a>

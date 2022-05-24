@@ -13,20 +13,35 @@
     margin-top: -27px;
     margin-right: 9%;
   }
+
+  @include mobile{
+    height: auto;
+    margin-top: 48px;
+    align-items: flex-start;
+    h2{
+      margin-top: 0;
+      padding-left: 20px;
+    }
+  }
 }
 
 .restaurants_card {
+  height: 100%;
   margin-top: -40px;
   width: 82.25%;
   justify-content: space-between;
   align-items: center;
   @include mobile {
     overflow-x: scroll;
+    width: 100%;
   }
 }
 
 
 .chef_of_the_week_restaurants_section {
+  .all_button{
+    display: none;
+  }
   margin-top: 20px;
   margin-bottom: 10px;
   width: 100%;
@@ -34,12 +49,34 @@
   h2{
     text-transform: capitalize;
     margin-bottom: 40px;
+    @include mobile{
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
   }
+  @include mobile{
+    height: 350px;
+
+    .all_button{
+      display: block;
+      margin-top: 16px;
+    }
+  }
+
+
 }
 
 .chef_of_the_week_restaurants_card {
+
   justify-content: flex-start;
   .restaurant{
     margin-right: 20px;
+    @include mobile{
+      padding-left: 20px;
+      margin-right: 4px;
+    }
+  }
+  @include mobile{
+    overflow-x: scroll;
   }
 }

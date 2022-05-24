@@ -11,6 +11,12 @@
   @include mobile{
     width: 245px;
     height: 233px;
+    margin-left: 20px;
+    margin-right: 4px;
+    img{
+      width: 245px;
+      height: 152px;
+    }
   }
 
   .text_restaurant_chef {
@@ -113,6 +119,8 @@
   @include mobile{
     width: 245px;
     height: 233px;
+    margin-bottom: 0;
+
     img{
       position: relative;
       width:245px;
@@ -147,7 +155,7 @@
       padding: 3.5px;
       @include mobile{
         font-size: 18px;
-        padding-left: 16px;
+        //padding-left: 16px;
       }
     }
   }
@@ -159,7 +167,9 @@
   img{
     width: 39px;
     height: 37px;
-
+  }
+  @include mobile{
+    display: none;
   }
 }
 

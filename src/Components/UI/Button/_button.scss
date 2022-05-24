@@ -102,6 +102,17 @@ $button-hover-background: #515151;
   }
 }
 
+.all_button{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  @include mobile{
+    box-sizing: border-box;
+    justify-content: flex-start;
+    padding-left: 24px;
+  }
+}
+
 
 
 

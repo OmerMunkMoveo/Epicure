@@ -29,6 +29,7 @@
     @include mobile {
       height: 47px;
       font-size: 18px;
+      width: 100%;
     }
   }
 }
@@ -39,6 +40,13 @@
   align-items: center;
   width: 82%;
   margin-left: 8.85%;
+
+  @include mobile{
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
 }
 .chef_of_the_week_info {
@@ -51,6 +59,30 @@
     background-color: black;
     width: 478px;
     height: 372px;
+  }
+
+  @include mobile{
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-direction: column;
+    .body_text{
+      margin-top: 24px;
+      width: 100%;
+    }
+
+    .chef_of_the_week_image{
+      display: flex;
+      justify-content: center;
+      background-color: transparent;
+      width: 100%;
+      height: auto;
+
+      img{
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+      }
+    }
   }
 }
 

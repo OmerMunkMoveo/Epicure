@@ -14,8 +14,8 @@ const AboutUs = () => {
                 </h2>
             </div>
             <Card className="card row about_us_content">
-                <div className="body_text">
 
+                <div className="body_text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum non
                 eu ipsum. Cras porta malesuada eros, eget blandit
                 turpis suscipit at. Vestibulum sed massa in magna sodales porta. Vivamus elit urna,
@@ -24,8 +24,16 @@ const AboutUs = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum no
                 eu ipsum. Cras porta malesuada eros.
                 </div>
+                <div className="header">
+                    <h2>
+                        about us:
+                    </h2>
+                </div>
+                <Card className="card row about_us_links_mobile">
+                    <img src={APP_STORE} alt="download on the app store"/>
+                    <img src={GOOGLE_PLAY} alt="get in on google play"/>
+                </Card>
                 <img src={LOGO} alt='logo'/>
-
             </Card>
             <Card className="card row about_us_links">
                 <img src={APP_STORE} alt="download on the app store"/>
