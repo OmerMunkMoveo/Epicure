@@ -8,15 +8,16 @@ import CLOSE from '../../Images/Icons/close.svg'
 import Input from "../UI/Input/Input";
 import {NavLink} from "react-router-dom";
 
-const Navigation = (props:any) => {
+const Navigation = (props: any) => {
 
     const [showSearch, setShowSearch] = useState<boolean>(false);
 
     const mobileMenuRef = useRef<any>()
+    console.log(props.activePage)
 
     return (
         <>
-        <div className="navbar_background" ></div>
+            <div className="navbar_background"></div>
             <nav className="navbar">
                 <div className="left_nav">
                     <img className='mobile_menu_button' src={MOBILE_MENU} alt='mobile menu'
@@ -29,14 +30,16 @@ const Navigation = (props:any) => {
 
 
                          }}/>
-                    <NavLink to='' className="main_link">
+                    <NavLink to='' onClick={()=>{props.setActivePage('home_page')}} className="main_link">
                         <img src={LOGO} alt="epicure logo"/>
                         <div className='main_link_text'>epicure</div>
                     </NavLink>
-                    <NavLink to='/restaurants' className="secondary_link" >
+                    <NavLink to='/restaurants' onClick={()=>{props.setActivePage('restaurants')}}
+                             className={`secondary_link ${props.activePage === 'restaurants' ? 'active_link' : ''}`}>
                         restaurants
                     </NavLink>
-                    <NavLink to='/chefs' className="secondary_link">
+                    <NavLink to='/chefs' onClick={()=>{props.setActivePage('chefs')}}
+                             className={`secondary_link ${props.activePage === 'chefs' ? 'active_link' : ''}`}>
                         chefs
                     </NavLink>
                 </div>
@@ -64,30 +67,29 @@ const Navigation = (props:any) => {
                 </div>
             </nav>
 
-                <nav ref={mobileMenuRef} className='mobile_overlay_menu'>
-                    <img onClick={() => {
-                        mobileMenuRef.current.style.height = '0';
-                        mobileMenuRef.current.style.zIndex = '0';
-                        mobileMenuRef.current.style.opacity = '0';
-                        mobileMenuRef.current.style.color = 'white';
-                        mobileMenuRef.current.style.pointerEvents = 'none';
-                    }} src={CLOSE} alt="close mobile menu" width='20px'/>
-                    <div className='mobile_menu_section'>
-                        <a><NavLink to='/restaurants'>restaurants</NavLink> </a>
-                        <a>chefs</a>
-                    </div>
+            <nav ref={mobileMenuRef} className='mobile_overlay_menu'>
+                <img onClick={() => {
+                    mobileMenuRef.current.style.height = '0';
+                    mobileMenuRef.current.style.zIndex = '0';
+                    mobileMenuRef.current.style.opacity = '0';
+                    mobileMenuRef.current.style.color = 'white';
+                    mobileMenuRef.current.style.pointerEvents = 'none';
+                }} src={CLOSE} alt="close mobile menu" width='20px'/>
+                <div className='mobile_menu_section'>
+                    <a><NavLink to='/restaurants'>restaurants</NavLink> </a>
+                    <a>chefs</a>
+                </div>
 
-                    <hr className="mobile_menu_line"/>
+                <hr className="mobile_menu_line"/>
 
-                    <div className='mobile_menu_section'>
-                        <a>contact us</a>
-                        <NavLink to='/terms_of_use'>terms of use</NavLink>
-                        <NavLink to='/privacy_policy'>privacy policy</NavLink>
-                    </div>
+                <div className='mobile_menu_section'>
+                    <a>contact us</a>
+                    <NavLink to='/terms_of_use'>terms of use</NavLink>
+                    <NavLink to='/privacy_policy'>privacy policy</NavLink>
+                </div>
 
-                </nav>
+            </nav>
         </>
-
 
 
     )

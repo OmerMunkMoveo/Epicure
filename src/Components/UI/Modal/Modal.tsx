@@ -5,7 +5,7 @@ const Modal = (props: any) => {
 
     return (
         <>
-            <div onClick={props.toggleShow} className="overlay">
+            <div onClick={props.toggleShow} className={`overlay ${props.active? 'active_modal' : 'inactive_modal'}`}>
             </div>
             <Card  className={`card column modal ${props.className}`}>
                 <div className="header">

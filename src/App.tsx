@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import './App.css';
 import './Styles/Style.css'
 
@@ -9,22 +9,36 @@ import {Route, Routes} from "react-router-dom";
 import HomePage from "./Components/HomePage/HomePage";
 import RestaurantsPage from "./Components/Restaurants/RestaurantsPage";
 
+
+
 function App() {
 
     const [showSideCart, setShowSideCart] = useState<boolean>(false);
+    const [activePage, setActivePage] = useState<string>('home_page');
+    const [cartFirstClick, setCartFirstClick] = useState<boolean>();
+    const cartRef = useRef();
+
+
     const toggleShowSideCart = () =>{
+        if (!cartFirstClick){
+            setCartFirstClick(pervState => !pervState)
+        }
+
         setShowSideCart(prevState => !prevState)
+
     }
 
+    console.log(activePage)
     return (
         <>
-            <Navigation sideCartToggle={toggleShowSideCart}></Navigation>
+            <Navigation activePage={activePage} setActivePage={setActivePage} sideCartToggle={toggleShowSideCart}></Navigation>
             <Routes>
                 <Route path='' element={<HomePage />}/>
                 <Route path='/restaurants' element={<RestaurantsPage/>}/>
             </Routes>
             <Footer></Footer>
-            {showSideCart && <SideCart sideCartToggle={toggleShowSideCart} ></SideCart> }
+            {/*{showSideCart && <SideCart ref={cartRef} sideCartToggle={toggleShowSideCart} ></SideCart> }*/}
+            {cartFirstClick && < SideCart showCart={showSideCart} ref={cartRef} sideCartToggle={toggleShowSideCart} ></SideCart>}
 
         </>
     );

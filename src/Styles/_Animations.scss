@@ -1,0 +1,43 @@
+@keyframes cart_in {
+  0% {
+    opacity: 0;
+    transform:translateX(100%) ;
+    display: flex;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    display: flex;
+  }
+}
+
+@keyframes cart_out {
+  0% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes modal_backdrop_in {
+  0% {
+    background-color: transparent;
+    opacity: 0;
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.67);
+  }
+}
+
+@keyframes modal_backdrop_out {
+  0% {
+    background-color: rgba(0, 0, 0, 0.67)
+  }
+  100% {
+    background-color: transparent;
+    opacity: 0;
+  }
+}

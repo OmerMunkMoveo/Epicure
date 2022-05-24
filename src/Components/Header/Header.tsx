@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <header>
 
-            <Card className="card column hero">
+            <Card  className="card column hero">
                 <Card className="card column main_header">
                     <div className="header">
                         <h1>

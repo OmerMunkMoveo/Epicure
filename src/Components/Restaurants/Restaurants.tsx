@@ -75,9 +75,10 @@ const Restaurants = (props: any) => {
         }
     }, [props.group, props.chef])
     return (
-        <section style={{width: '100%'}}>
+        <section
+            style={{width: '100%'}}>
             <Card
-                className={`card column ${props.homePage ? 'restaurants_section' : 'chef_of_the_week_restaurants_section'}`}>
+                className={`card column ${!props.chef ? 'restaurants_section' : 'chef_of_the_week_restaurants_section'} ${props.className}`}>
                 <div className="header">
                     <h2>
                         {props.homePage ? 'popular restaurants in epicure' : (props.chef ?
@@ -85,7 +86,7 @@ const Restaurants = (props: any) => {
                     </h2>
                 </div>
                 <Card
-                    className={`card row ${props.homePage ? 'restaurants_card' : 'chef_of_the_week_restaurants_card'}`}>
+                    className={`card row ${!props.chef ? 'restaurants_card' : 'chef_of_the_week_restaurants_card'} ${props.className}`}>
                     {props.homePage || props.chef ? restaurants : <ul>{restaurants}</ul>}
 
                 </Card>

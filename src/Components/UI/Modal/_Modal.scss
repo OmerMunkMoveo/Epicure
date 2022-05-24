@@ -7,9 +7,25 @@
   background-color: rgba(0, 0, 0, 0.67);
 }
 
+
+
 .modal{
   position: fixed;
   background-color: white;
   z-index: 16;
+}
+
+.active_modal{
+  animation-name: modal_backdrop_in;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+}
+
+.inactive_modal{
+  animation-name: modal_backdrop_out;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  z-index: -1;
 }
 

@@ -5,10 +5,10 @@ import CART from "../../Images/Icons/cart.svg"
 
 const SideCart = (props: any) => {
 
-
     return (
         <>
-            <Modal toggleShow={props.sideCartToggle} className="modal side_cart">
+            <Modal active={props.showCart} toggleShow={props.sideCartToggle}
+                   className={`modal side_cart ${props.showCart ? 'show_cart' : 'hide_cart'}`}>
                 <img src={CART} alt="cart"/>
                 <p>
                     your bag is empty

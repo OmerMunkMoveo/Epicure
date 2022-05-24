@@ -76,6 +76,9 @@
         transition-duration: 0.15s;
       }
     }
+    .active_link{
+      border-bottom: 1.8px solid rgba(222, 146, 0, 0.9);
+    }
 
 
   }
@@ -205,5 +208,6 @@ width: 100%;
     display: none;
   }
 }
+
 
 
