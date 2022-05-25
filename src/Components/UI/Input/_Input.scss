@@ -1,26 +1,7 @@
 $border-button-width: 0.5px;
 .search_bar{
-  margin-right: -45px;
-  img{
-    display: none;
-  }
-  h1{
-    display: none;
-  }
-  input[type="text"]{
-    box-sizing: border-box;
-    display: flex;
-    width:410px;
-    align-items: center;
-    height: 41px;
-    border-radius: 4px;
-    padding: 6px 20px;
-    border: 0.5px solid black;
-    font-size: 18px;
-    letter-spacing: 1.29px;
-    font-weight: 200;
-  }
-@include mobile{
+  animation-name: rollIn;
+  animation-duration: 0.3s;
   position: fixed;
   top:0;
   left: 0;
@@ -40,20 +21,47 @@ $border-button-width: 0.5px;
     margin-top: 10px;
     text-align: center;
   }
-
   input[type="text"]{
     width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 41px;
+    border-radius: 4px;
+    padding: 6px 20px;
+    border: 0.5px solid black;
+    font-size: 18px;
+    letter-spacing: 1.29px;
+    font-weight: 200;
   }
-
-
+@include desktop{
+  margin-right: -45px;
+  position: relative;
+  height: auto;
+  width: auto;
+  input[type="text"]{
+    width:410px;
+  }
+  img{
+    display: none;
+  }
+  h1{
+    display: none;
+  }
 }
 }
 
 .header_search{
-  width: 149%;
+  width: 117.5%;
   display: flex;
   align-items: center;
-  margin-top: 14px;
+  margin-top: -50px;
+
+  @include desktop{
+    width: 149%;
+    margin-top: 14px;
+  }
+
   .header{
     h1{
       display: none;
@@ -64,59 +72,70 @@ $border-button-width: 0.5px;
   }
   img{
     position: absolute;
-    margin-left: 11% ;
-    margin-top: 9px;
-    @include mobile{
-      width: 20px;
-      height: 20px;
-      margin-left: 3.5%;
-      margin-top: 0;
+    margin-left: 3.5% ;
+    margin-top: 0;
+    width: 20px;
+    height: 20px;
+    @include desktop{
+      width: auto;
+      height: auto;
+      margin-left: 11%;
+      margin-top: 9px;
     }
-  }
-  @include mobile{
-    width: 117.5%;
-    margin-top: -50px;
   }
 
   label{
-    width: 90%;
-    margin-left: 5%;
-    @include mobile{
-      width: 100%;
-      margin: 0;
+    width: 100%;
+    margin: 0;
+    @include desktop{
+      width: 90%;
+      margin-left: 5%;
+
     }
   }
 
   input[type="text"]{
+    box-sizing: border-box;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 16px;
-    height: 48px;
+    height: 30px;
+    padding: 0 30px 0 30px;
+    margin: 0 0 0 0;
 
-    padding: 6px 0;
-    padding-left: 7.25%;
-    width: 64.3%;
-    margin-left: 14%;
+
+    width: 100%;
     background-color: transparent;
     border: 0.5px solid black;
     border-radius: 4px;
-    font-size: 24px;
+    font-size: 12px;
     font-weight: 200;
+    letter-spacing: 1.29px;
+
+
+    @include desktop{
+      box-sizing: content-box;
+      width: 64.3%;
+      height: 48px;
+      padding: 6px 0;
+      padding-left: 7.25%;
+      font-size: 24px;
+      margin: auto;
+      margin-left: 14%;
+
+      //letter spacing??
+    }
+
     &::placeholder{
       text-align: center;
     }
-    @include mobile{
-      box-sizing: border-box;
-      width: 100%;
-      height: 30px;
-      padding: 0 30px 0 30px;
-      font-size: 12px;
-      margin: 0 0 0 0;
-      letter-spacing: 1.29px;
+    &:focus{
+      animation-name: input_focus;
+      animation-duration: 500ms;
     }
-
 
   }
 }

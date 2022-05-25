@@ -9,6 +9,10 @@ import {Route, Routes} from "react-router-dom";
 import HomePage from "./Components/HomePage/HomePage";
 import RestaurantsPage from "./Components/Restaurants/RestaurantsPage";
 
+//todo: remove inline stling
+//todo: include mobile or desktop only in the second prespective
+// fix the verious bugs that i have
+
 
 
 function App() {
@@ -16,7 +20,6 @@ function App() {
     const [showSideCart, setShowSideCart] = useState<boolean>(false);
     const [activePage, setActivePage] = useState<string>('home_page');
     const [cartFirstClick, setCartFirstClick] = useState<boolean>();
-    const cartRef = useRef();
 
 
     const toggleShowSideCart = () =>{
@@ -38,7 +41,7 @@ function App() {
             </Routes>
             <Footer></Footer>
             {/*{showSideCart && <SideCart ref={cartRef} sideCartToggle={toggleShowSideCart} ></SideCart> }*/}
-            {cartFirstClick && < SideCart showCart={showSideCart} ref={cartRef} sideCartToggle={toggleShowSideCart} ></SideCart>}
+            {cartFirstClick && < SideCart showCart={showSideCart} sideCartToggle={toggleShowSideCart} ></SideCart>}
 
         </>
     );

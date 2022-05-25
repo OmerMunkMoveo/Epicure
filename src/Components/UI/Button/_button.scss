@@ -16,6 +16,8 @@ $button-hover-background: #515151;
   padding: 5px 10px;
   gap: 10px;
   border: 1px $primary-color1 solid;
+  transition-duration: 0.2s;
+
 
 
   .lock_icon {
@@ -36,6 +38,7 @@ $button-hover-background: #515151;
     }
   }
   &:hover {
+    transition-duration: 0.2s;
     background-color: $button-hover-background;
     cursor: pointer;
   }
@@ -85,12 +88,12 @@ $button-hover-background: #515151;
     flex: none;
     order: 0;
     flex-grow: 0;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 2px;
     text-transform: capitalize;
-    @include mobile{
-      font-size: 16px;
+    @include desktop{
+      font-size: 24px;
     }
   }
   .arrow {
@@ -104,12 +107,21 @@ $button-hover-background: #515151;
 
 .all_button{
   display: flex;
-  justify-content: flex-end;
   width: 100%;
-  @include mobile{
-    box-sizing: border-box;
-    justify-content: flex-start;
-    padding-left: 24px;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  padding-left: 24px;
+  @include desktop{
+    box-sizing: content-box;
+    justify-content: flex-end;
+    padding-left: 0;
+  }
+  &:hover{
+    animation-name: headShake;
+    animation-duration: 0.75s;
+    animation-iteration-count: 1;
+    animation-delay: 0.1s;
+    animation-play-state: running;
   }
 }
 

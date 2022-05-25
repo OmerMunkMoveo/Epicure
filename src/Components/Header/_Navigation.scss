@@ -1,4 +1,6 @@
 .navbar {
+  animation-name: bounceInRight;
+  animation-duration: 1.3s;
   z-index: 10;
   top:0;
   height: 64px;
@@ -49,6 +51,10 @@
       font-weight: 200;
       font-size: 27px;
       letter-spacing: 1.35px;
+      &:hover{
+        animation: blur;
+        animation-duration: 0.3s;
+      }
 
       img {
         margin-right: 15px;
@@ -74,6 +80,8 @@
       &:hover {
         border-bottom: 1.8px solid rgba(222, 146, 0, 0.9);
         transition-duration: 0.15s;
+        animation-name: button_hover;
+        animation-duration: 0.3s;
       }
     }
     .active_link{

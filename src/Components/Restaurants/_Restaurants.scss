@@ -1,48 +1,57 @@
 
 .restaurants_section {
-  ul, li{
-    list-style-type: none;
-  }
-  margin-top: 55px;
-  //height: 555px;
-  height: 100%;
+  height: auto;
+  margin-top: 48px;
+  align-items: flex-start;
   justify-content: space-between;
-  align-items: center;
   padding: 0;
   gap: 40px;
 
+  ul, li{
+    list-style-type: none;
+  }
   button {
     margin-top: -27px;
     margin-right: 9%;
   }
-
-  @include mobile{
-    height: auto;
-    margin-top: 48px;
-    align-items: flex-start;
-    h2{
-      margin-top: 0;
-      padding-left: 20px;
+  h2{
+    margin-top: 0;
+    padding-left: 20px;
+    @include desktop{
+      //todo: check this two properties
+      margin: auto;
+      padding: inherit;
     }
   }
-}
+  @include desktop{
+    height: 100%;
+    margin-top: 55px;
+    align-items: center;
 
+  }
+}
 .restaurants_card {
   height: 100%;
   margin-top: -40px;
-  width: 82.25%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  @include mobile {
-    overflow-x: scroll;
-    width: 100%;
+  overflow-x: scroll;
+  @include desktop{
+    width: 82.25%;
+    //todo: change overflow-x??
   }
 }
 
 
 .chef_of_the_week_restaurants_section {
+  height: 350px;
   .all_button{
-    display: none;
+    display: block;
+    margin-top: 16px;
+    @include desktop{
+      display: none;
+    }
   }
   margin-top: 20px;
   margin-bottom: 10px;
@@ -50,35 +59,35 @@
   justify-content: flex-start;
   h2{
     text-transform: capitalize;
-    margin-bottom: 40px;
-    @include mobile{
-      padding-left: 20px;
-      margin-bottom: 16px;
+    margin-bottom: 16px;
+    padding-left: 20px;
+    @include desktop{
+      margin-bottom: 40px;
+      //todo: check the padding
+      padding: 0;
+
     }
   }
-  @include mobile{
-    height: 350px;
-
-    .all_button{
-      display: block;
-      margin-top: 16px;
-    }
+  @include desktop{
+    height: auto;
   }
-
 
 }
 
 .chef_of_the_week_restaurants_card {
-
   justify-content: flex-start;
+  overflow-x: scroll;
+
   .restaurant{
-    margin-right: 20px;
-    @include mobile{
-      padding-left: 20px;
-      margin-right: 4px;
+    margin-right: 4px;
+    padding-left: 20px;
+    @include desktop{
+      //todo: check the padding
+      padding-left: 0;
+      margin-right: 20px;
     }
   }
-  @include mobile{
-    overflow-x: scroll;
+  @include desktop{
+    //todo: check if overgflow-x needed
   }
 }
