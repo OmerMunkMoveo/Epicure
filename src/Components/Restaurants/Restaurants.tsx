@@ -16,20 +16,14 @@ const Restaurants = (props: any) => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1
     }
-    let centerCarousel = true;
 
-    if (window.innerWidth < 600){
-        settings.slidesToShow = 1
+    if (window.innerWidth >= 600){
+        settings.slidesToShow = 3
     }
     let sliderRef = useRef<any>();
-    if(sliderRef.current){
-        console.log(sliderRef.current.props.centerMode)
-        centerCarousel = false;
-    }
-
 
     const getAllRestaurant = () => {
         axios.get("MockData/AllRestaurants.json").then((res: any) => {
@@ -102,18 +96,18 @@ const Restaurants = (props: any) => {
         return (
             <section>
                 <Card className="restaurants_section">
-                    <div className="header" style={{textAlign: 'center'}}>
+                    <div className="header helper_header_align_center" >
                         <h2>
                             {props.homePage ? 'popular restaurants in epicure' : (props.chef ?
                                 `${props.chef?.name}'s restaurants` : '')}
                         </h2>
                     </div>
-                    <div style={{width:'83.3%', marginLeft:'8.9%'}}>
+                    <div className="helper_div_sides">
                         <Slider
                             ref={sliderRef}
                             className="card row"
                             autoplay={true}
-                            centerMode={centerCarousel}
+                            centerMode={true}
                             autoplaySpeed={3000}
                             {...settings}>
                             {restaurants}
@@ -126,7 +120,7 @@ const Restaurants = (props: any) => {
     } else {
         return (
             <section
-                style={{width: '100%'}}>
+                className="helper_section_width_100">
                 <Card
                     className={`card column ${!props.chef ? 'restaurants_section' : 'chef_of_the_week_restaurants_section'} ${props.className}`}>
                     <div className="header">

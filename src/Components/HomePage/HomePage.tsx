@@ -1,4 +1,3 @@
-import React, {useRef} from 'react';
 import Header from "../Header/Header";
 import Restaurants from "../Restaurants/Restaurants";
 import Dishes from "../Dishes/Dishes";
@@ -14,6 +13,7 @@ const HomePage = () => {
             <Header></Header>
             <AnimationOnScroll animateIn="animate__fadeInUp" animateOut="animate__zoomOutDown">
                 <Restaurants carousel={true} group="most popular" homePage></Restaurants>
+                {/*<Restaurants  group="most popular" homePage></Restaurants>*/}
             </AnimationOnScroll>
             <AnimationOnScroll animateIn="animate__animated animate__fadeInUp" animateOut="animate__zoomOutDown">
                 <Dishes></Dishes>

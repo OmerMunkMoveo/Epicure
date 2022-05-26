@@ -1,27 +1,30 @@
 $border-button-width: 0.5px;
-.search_bar{
+.search_bar {
   animation-name: rollIn;
   animation-duration: 0.3s;
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   height: 413px;
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: #ffffff;
-  img{
+  background-color: white;
+
+  img {
     display: block;
     position: fixed;
-    top:15px;
-    left:20px;
+    top: 15px;
+    left: 20px;
   }
-  h1{
+
+  h1 {
     display: block;
     margin-top: 10px;
     text-align: center;
   }
-  input[type="text"]{
+
+  input[type="text"] {
     width: 100%;
     box-sizing: border-box;
     display: flex;
@@ -33,70 +36,83 @@ $border-button-width: 0.5px;
     font-size: 18px;
     letter-spacing: 1.29px;
     font-weight: 200;
+    background-color: transparent;
+
   }
-@include desktop{
-  margin-right: -45px;
-  position: relative;
-  height: auto;
-  width: auto;
-  input[type="text"]{
-    width:410px;
+
+  @include desktop {
+    margin-right: -45px;
+    position: relative;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+
+    input[type="text"] {
+      width: 410px;
+    }
+    img {
+      display: none;
+    }
+    h1 {
+      display: none;
+    }
   }
-  img{
-    display: none;
-  }
-  h1{
-    display: none;
-  }
-}
 }
 
-.header_search{
-  width: 117.5%;
+.header_search {
+  .wrapping_label {
+    &:focus-within {
+
+      animation-name: input_focus;
+      animation-duration: 500ms;
+
+    }
+  }
+  width: 100%;
   display: flex;
   align-items: center;
   margin-top: -50px;
 
-  @include desktop{
+  @include desktop {
     width: 149%;
     margin-top: 14px;
   }
 
-  .header{
-    h1{
+  .header {
+    h1 {
       display: none;
     }
-    img{
+
+    img {
       display: none;
     }
   }
-  img{
+
+  img {
     position: absolute;
-    margin-left: 3.5% ;
-    margin-top: 0;
+    margin-left: 12px;
+    margin-top: 5px;
     width: 20px;
     height: 20px;
-    @include desktop{
-      width: auto;
-      height: auto;
-      margin-left: 11%;
+    @include desktop {
+      width: 32px;
+      height: 32px;
       margin-top: 9px;
     }
   }
 
-  label{
+  label {
     width: 100%;
     margin: 0;
-    @include desktop{
-      width: 90%;
-      margin-left: 5%;
+    @include desktop {
+      width: auto;
+      margin: auto;
 
     }
   }
 
-  input[type="text"]{
+  input[type="text"] {
     box-sizing: border-box;
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -105,8 +121,6 @@ $border-button-width: 0.5px;
     height: 30px;
     padding: 0 30px 0 30px;
     margin: 0 0 0 0;
-
-
     width: 100%;
     background-color: transparent;
     border: 0.5px solid black;
@@ -115,27 +129,28 @@ $border-button-width: 0.5px;
     font-weight: 200;
     letter-spacing: 1.29px;
 
-
-    @include desktop{
-      box-sizing: content-box;
-      width: 64.3%;
+    @include desktop {
+      box-sizing: border-box;
+      width: 505px;
       height: 48px;
-      padding: 6px 0;
-      padding-left: 7.25%;
+      padding: 6px 0 6px 45px;
+      align-items: center;
+      display: flex;
+      //padding-left: 7.25%;
       font-size: 24px;
       margin: auto;
-      margin-left: 14%;
+      //margin-left: 14%;
 
       //letter spacing??
     }
-
-    &::placeholder{
+    &::placeholder {
       text-align: center;
+      @include desktop{
+        text-align: left;
+      }
     }
-    &:focus{
-      animation-name: input_focus;
-      animation-duration: 500ms;
-    }
+
+
 
   }
 }
@@ -319,3 +334,6 @@ $border-button-width: 0.5px;
   border-radius: 50%;
   background: black;
 }
+
+
+

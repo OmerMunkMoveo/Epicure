@@ -5,20 +5,21 @@
   gap: 32px;
   height: 584px;
   background-color: #FAFAFA;
-  margin-bottom: 105px;
   padding-bottom: -20px;
   margin-top: 46px;
+  margin-bottom: 48px;
 
   @include desktop {
     margin-top: 0;
     height: 265px;
+    margin-bottom: 105px;
+
   }
 
   h2 {
     font-size: 18px;
     @include desktop {
-      //todo: fix the font isze
-      font-size: inherit;
+      font-size: 30px;
     }
   }
 
@@ -31,9 +32,8 @@
   flex-direction: column;
   height: 100%;
   @include desktop {
-   //todo: check the height
     height: auto;
-  flex-direction: row;
+    flex-direction: row;
     justify-content: space-between;
   }
 }

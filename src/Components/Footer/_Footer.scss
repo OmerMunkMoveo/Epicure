@@ -31,6 +31,8 @@
 
     &:hover {
       cursor: pointer;
+      animation-name: button_hover;
+      animation-duration: 0.3s;
     }
   }
 }

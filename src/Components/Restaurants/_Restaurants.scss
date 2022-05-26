@@ -10,36 +10,45 @@
   ul, li{
     list-style-type: none;
   }
+
+  .slick-slide{
+    //margin: 0 10px;
+  }
+
   button {
-    margin-top: -27px;
+    //margin-top: -27px;
     margin-right: 9%;
   }
   h2{
-    margin-top: 0;
     padding-left: 20px;
     @include desktop{
       //todo: check this two properties
-      margin: auto;
+      //margin: auto;
       padding: inherit;
+      margin-bottom: 40px;
     }
   }
   @include desktop{
     height: 100%;
     margin-top: 55px;
     align-items: center;
+    gap: 40px;
 
   }
 }
 .restaurants_card {
   height: 100%;
-  margin-top: -40px;
+  //margin-top: -40px;
   width: 100%;
-  justify-content: space-between;
+  //justify-content: space-between;
+  justify-content: center;
   align-items: center;
   overflow-x: scroll;
   @include desktop{
+    gap:24px;
+
     width: 82.25%;
-    //todo: change overflow-x??
+    overflow-x: hidden;
   }
 }
 
@@ -77,14 +86,19 @@
 .chef_of_the_week_restaurants_card {
   justify-content: flex-start;
   overflow-x: scroll;
+  gap:16px;
+  @include desktop{
+    overflow-x: hidden;
+  }
 
   .restaurant{
-    margin-right: 4px;
-    padding-left: 20px;
+    //margin-right: 4px;
+    //padding-left: 20px;
     @include desktop{
       //todo: check the padding
       padding-left: 0;
-      margin-right: 20px;
+      //margin-right: 20px;
+
     }
   }
   @include desktop{

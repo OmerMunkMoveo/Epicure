@@ -1,7 +1,15 @@
-@mixin dishContent($dishInfoHeight, $dishPrimaryFontSize, $dishSecondaryFontSize,$dishPrimaryFontPadding, $dishSecondaryFontPadding, $dishInfoLine){
+@mixin dishContent($dishInfoHeight, $dishPrimaryFontSize, $dishSecondaryFontSize,$dishPrimaryFontPadding, $dishSecondaryFontPadding, $dishInfoLine) {
   display: flex;
   flex-direction: column;
   //padding: 0;
+  img{
+    @include desktop{
+      //width: 380px;
+      width: inherit;
+      //height: 306px;
+      height: inherit;
+    }
+  }
   .dish_info {
     box-sizing: border-box;
     display: flex;
@@ -9,17 +17,18 @@
     background-color: #F9F4EA;
     width: inherit;
     height: $dishInfoHeight;
-    justify-content: space-between;
+    //justify-content: space-evenly;
     align-items: flex-start;
     padding-left: 16px;
-    gap: 8px;
-    @include desktop{
+    gap: 16px;
+    @include desktop {
       align-items: center;
       padding: 24px 0 8px;
     }
     //align-self: stretch;
 
-    .dish_text{
+    .dish_text {
+      padding-top: 16px;
       display: flex;
       flex-direction: column;
       .dish_text_primary {
@@ -31,40 +40,51 @@
         text-align: center;
 
       }
+
       .dish_text_secondary {
         margin-top: -15px;
         text-align: left;
         font-size: $dishSecondaryFontSize;
         letter-spacing: 1.97px;
         font-weight: 200;
+        min-height: 100px;
         padding: $dishSecondaryFontPadding;
 
-        @include desktop{
+        @include desktop {
           text-align: center;
         }
       }
     }
+
     .dish_price {
+      img{
+        @include desktop{
+          width: inherit;
+          height: inherit;
+        }
+      }
 
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
       align-items: center;
       width: auto;
-      @include desktop{
-        width: 287px;
+      @include desktop {
+        width: 77%;
       }
       height: 30px;
+
       .dish_text_price {
         display: flex;
         font-size: $dishSecondaryFontSize;
         letter-spacing: 1.97px;
         font-weight: 400;
-        @include desktop{
+        @include desktop {
           font-weight: 200;
         }
         gap: 4px;
       }
+
       .dish_line {
         width: $dishInfoLine;
         height: 0;
@@ -73,18 +93,20 @@
     }
   }
 }
+
 .dish_big {
   width: 360px;
   height: 645px;
   @include dishContent(364px, 40px, 24px, 0 55px 20px 55px, 0 30px, 112px);
 }
+
 .dish_small {
   width: 272px;
   height: 413px;
-  @include dishContent(240.27px, 24px, 20px,0 55px 20px 55px, 0 15px 20px 15px, 82.5px);
+  @include dishContent(240.27px, 24px, 20px, 0 55px 20px 55px, 0 15px 20px 15px, 82.5px);
 }
 
-.dish_signature{
+.dish_signature {
 
   width: 245px;
   height: 100%;
@@ -92,27 +114,29 @@
   padding-left: 20px;
   padding-right: 4px;
 
-  .dish_text{
+  .dish_text {
     align-items: flex-start;
-  }
-  .dish_price{
-    padding-bottom: 10px;
-  }
-
-  @include desktop{
-    width: 380px;
-    height: 645px;
-    //todo: check padding
-    padding: 0;
-    @include dishContent(364px, 40px, 24px, 0 55px 20px 55px, 0 30px, 112px);
-    .dish_text{
+    @include desktop {
       //todo: what here?
       align-items: flex-start;
     }
-    .dish_price{
+  }
+
+  .dish_price {
+    padding-bottom: 16px;
+    @include desktop {
       //todo: check this
       padding-bottom: 0;
     }
+  }
+
+  @include desktop {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    @include dishContent(364px, 40px, 24px, 0 55px 20px 55px, 0 30px, 112px);
+
   }
   //.dish_image{
   //  width: 380px;
@@ -122,11 +146,18 @@
 }
 
 
-.dish_props{
+.dish_props {
   height: 100%;
   display: flex;
-  img{
-    width: 40px;
+  align-items: flex-end;
+  img {
+    width: 30px;
+    height: 23px;
+    @include desktop{
+      width: 40px;
+      height: 40px;
+    }
+
   }
 }
 

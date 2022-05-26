@@ -24,6 +24,7 @@ const AboutUs = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum no
                 eu ipsum. Cras porta malesuada eros.
                 </div>
+
                 <div className="header">
                     <h2>
                         about us:

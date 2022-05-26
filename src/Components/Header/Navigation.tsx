@@ -45,7 +45,6 @@ const Navigation = (props: any) => {
                 </div>
 
                 <div className="right_nav">
-                    {showSearch && <span className='vertical_line'>|</span>}
                     {showSearch && <Input onBlur={() => {
                         setShowSearch((prevShowSearch) => !prevShowSearch)
                     }} focus={true} className="search_bar" type="text"

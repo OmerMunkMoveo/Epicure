@@ -2,8 +2,8 @@
 
 .dishes_section {
   margin: 48px 0 0 0;
-
-  height: 100%;
+  //height: 100%;
+  height: auto;
   justify-content: space-between;
   align-items: flex-start;
   padding: 0;
@@ -19,12 +19,12 @@
     }
   }
   @include desktop{
+
     align-items: center;
-    height: 729px;
+    //height: 729px;
+    height: 100%;
     margin-top: 55px;
     margin-bottom: 97px;
-
-
   }
   .all_button{
     height: 35px;
@@ -32,6 +32,7 @@
     display: flex;
 
     @include desktop{
+
       display: none;
     }
   }
@@ -45,6 +46,10 @@
 
   @include desktop{
     //todo: what about overflow-x?
+    overflow-x: hidden;
+    gap: 24px;
+    overflow-y: hidden;
+
     width: 82.25%;
   }
 }

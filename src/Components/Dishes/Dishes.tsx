@@ -29,7 +29,7 @@ const Dishes = () => {
 
 
     return (
-        <section style={{width:'100%'}}>
+        <section className="helper_section_width_100">
             <Card className = "card column dishes_section">
                 <div className="header">
                     <h2>

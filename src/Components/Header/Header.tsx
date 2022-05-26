@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from "../UI/Card/Card";
 import Input from "../UI/Input/Input";
-import SEARCH from "../../Images/Icons/search.svg";
 
 const Header = () => {
 
@@ -17,8 +16,8 @@ const Header = () => {
                         </h1>
                     </div>
                     <div className="header_search">
-                        <img className="search_logo" src={SEARCH} alt="search"/>
-                        <Input type="text"
+                        {/*<img className="search_logo" src={SEARCH} alt="search"/>*/}
+                        <Input header type="text"
                                placeholder="Search for restaurant, cuisine, chef"></Input>
 
                     </div>
