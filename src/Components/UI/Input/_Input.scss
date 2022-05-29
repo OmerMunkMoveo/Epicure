@@ -77,6 +77,9 @@ $border-button-width: 0.5px;
     width: 149%;
     margin-top: 14px;
   }
+  @include tablet3{
+    width: 100%;
+  }
 
   .header {
     h1 {
@@ -139,6 +142,11 @@ $border-button-width: 0.5px;
       font-size: 24px;
       margin: auto;
 
+    }
+    @include tablet3{
+      font-size: 16px;
+      padding: 0 0 0 45px;
+      width: 370px;
     }
     &::placeholder {
       text-align: center;

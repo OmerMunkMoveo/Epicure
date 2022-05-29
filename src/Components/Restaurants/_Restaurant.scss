@@ -1,3 +1,15 @@
+@mixin text_restaurant_chef_primary (){
+  font-size: 18px;
+  font-weight: $bold-weight;
+  letter-spacing: $letter-spacing-5;
+  margin: 0;
+  padding: 3.5px;
+  @include desktop {
+    font-size: 40px;
+  }
+}
+
+
 .restaurant_chef {
   box-sizing: border-box;
   width: auto;
@@ -38,15 +50,12 @@
     }
 
     .text_restaurant_chef_primary {
-      font-size: 18px;
-      font-weight: $bold-weight;
-      letter-spacing: $letter-spacing-5;
-      margin: 0;
-      padding: 3.5px;
-      @include desktop {
-        font-size: 40px;
+      @include text_restaurant_chef_primary();
+      @include tablet3{
+        font-size: 22px;
       }
     }
+
 
     .text_restaurant_chef_secondary {
       font-size: 16px;
@@ -56,6 +65,9 @@
       padding: 3.5px;
       @include desktop {
         font-size: 24px;
+      }
+      @include tablet3{
+        font-size: 18px;
       }
     }
   }
@@ -82,16 +94,13 @@
       padding: 0;
     }
 
+
+
     .text_restaurant_chef_primary {
-      font-size: 18px;
-      font-weight: $bold-weight;
-      letter-spacing: $letter-spacing-5;
-      margin: 0;
-      padding: 3.5px;
-      @include desktop {
-        font-size: 40px;
-      }
+      @include text_restaurant_chef_primary();
+
     }
+
 
     .text_restaurant_chef_secondary {
       font-size: 16px;
@@ -102,6 +111,7 @@
       @include desktop {
         font-size: 24px;
       }
+
     }
 
   }
@@ -118,6 +128,15 @@
     height: 357px;
     margin-bottom: 90px;
   }
+  @include tablet3{
+    width: 150px;
+    .text_restaurant{
+      .text_restaurant_primary{
+        font-size: 20px;
+
+      }
+    }
+  }
 
   img {
     position: relative;
@@ -125,6 +144,8 @@
     height: 150px;
     object-fit: cover;
     @include desktop {
+      width: inherit;
+
     }
 
   }
@@ -166,6 +187,10 @@
   img {
     width: 39px;
     height: 37px;
+    @include tablet3{
+      width: 20px;
+      height: 20px;
+    }
   }
 
   @include desktop {

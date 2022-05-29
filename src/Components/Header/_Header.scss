@@ -22,9 +22,7 @@
   display: flex;
   width: auto;
   padding: 0 10px;
-
   height: 144px;
-
   background: rgba(255, 255, 255, 0.88);
   justify-content: space-around;
   @include desktop {
@@ -32,6 +30,9 @@
     height: 227px;
     padding: 8.25px 8.85%;
     justify-content: flex-start;
+  }
+  @include tablet3{
+    width: 60%;
   }
 
   h1 {
@@ -44,8 +45,13 @@
       width: 404px;
       line-height: 40px;
       margin-bottom: 3%;
-      //todo: check the props from here
       text-align: inherit;
+    }
+
+    @include tablet3{
+      width: 400px;
+      font-size: 40px;
+      text-align: center;
     }
   }
 }

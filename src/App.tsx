@@ -7,13 +7,7 @@ import Footer from "./Components/Footer/Footer";
 import SideCart from "./Components/Cart/SideCart";
 import {Route, Routes} from "react-router-dom";
 import HomePage from "./Components/HomePage/HomePage";
-import RestaurantsPage from "./Components/Restaurants/RestaurantsPage";
-
-//todo: remove inline stling
-//todo: include mobile or desktop only in the second prespective
-// fix the verious bugs that i have
-
-
+// import RestaurantsPage from "./Components/Restaurants/RestaurantsPage";
 
 function App() {
 
@@ -22,8 +16,8 @@ function App() {
     const [cartFirstClick, setCartFirstClick] = useState<boolean>();
 
 
-    const toggleShowSideCart = () =>{
-        if (!cartFirstClick){
+    const toggleShowSideCart = () => {
+        if (!cartFirstClick) {
             setCartFirstClick(pervState => !pervState)
         }
 
@@ -34,14 +28,19 @@ function App() {
     console.log(activePage)
     return (
         <>
-            <Navigation activePage={activePage} setActivePage={setActivePage} sideCartToggle={toggleShowSideCart}></Navigation>
+            <Navigation activePage={activePage} setActivePage={setActivePage}
+                        sideCartToggle={toggleShowSideCart}></Navigation>
             <Routes>
-                <Route path='' element={<HomePage />}/>
-                <Route path='/restaurants' element={<RestaurantsPage/>}/>
+                <Route path='' element={<HomePage/>}/>
+                {/*<Route path='/restaurants' element={<RestaurantsPage/>}/>*/}
+                <Route path='/restaurants' element={<h1><br/><br/>Restaurant's Section</h1>}/>
+                <Route path='/chefs' element={<h1><br/><br/>Chef's Section</h1>}/>
+                <Route path='/user' element={<h1><br/><br/>User's Section</h1>}/>
+                <Route path='/terms_of_use' element={<h1><br/><br/>Terms of use Section</h1>}/>
+                <Route path='/privacy_policy' element={<h1><br/><br/>Privacy policy Section</h1>}/>
             </Routes>
             <Footer></Footer>
-            {/*{showSideCart && <SideCart ref={cartRef} sideCartToggle={toggleShowSideCart} ></SideCart> }*/}
-            {cartFirstClick && < SideCart showCart={showSideCart} sideCartToggle={toggleShowSideCart} ></SideCart>}
+            {cartFirstClick && < SideCart showCart={showSideCart} sideCartToggle={toggleShowSideCart}></SideCart>}
 
         </>
     );
@@ -49,8 +48,5 @@ function App() {
 
 export default App;
 
-//#TODO: place holder , start typing from the let in the input n the headr
-//todo: font weight
 
-//TODO: fic the issue with the dish, that the shole cards will adjust by the biggest
 

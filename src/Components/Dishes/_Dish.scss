@@ -1,5 +1,6 @@
 @mixin dishContent($dishInfoHeight, $dishPrimaryFontSize, $dishSecondaryFontSize,$dishPrimaryFontPadding, $dishSecondaryFontPadding, $dishInfoLine) {
   display: flex;
+  align-items: stretch;
   flex-direction: column;
   //padding: 0;
   img{
@@ -16,9 +17,11 @@
     flex-direction: column;
     background-color: #F9F4EA;
     width: inherit;
-    height: $dishInfoHeight;
-    //justify-content: space-evenly;
+    //height: $dishInfoHeight;
+    justify-content: stretch;
     align-items: flex-start;
+    flex-basis: 0;
+    flex-grow: 1;
     padding-left: 16px;
     gap: 16px;
     @include desktop {
@@ -47,7 +50,7 @@
         font-size: $dishSecondaryFontSize;
         letter-spacing: $letter-spacing-4;
         font-weight: $regular-weight;
-        min-height: 100px;
+        //min-height: 100px;
         padding: $dishSecondaryFontPadding;
 
         @include desktop {
@@ -86,7 +89,8 @@
       }
 
       .dish_line {
-        width: $dishInfoLine;
+        //width: $dishInfoLine;
+        width: 100%;
         height: 0;
         border: 0.5px solid #979797;
       }
@@ -109,7 +113,10 @@
 .dish_signature {
 
   width: 245px;
-  height: 100%;
+  @include desktop{
+    width: auto;
+  }
+  //height: 100%;
   @include dishContent(236px, 18px, 16px, 0 0 20px 0, 0 0 0 0, 0);
   padding-left: 20px;
   padding-right: 4px;
@@ -117,15 +124,14 @@
   .dish_text {
     align-items: flex-start;
     @include desktop {
-      //todo: what here?
       align-items: flex-start;
     }
   }
 
+
   .dish_price {
     padding-bottom: 16px;
     @include desktop {
-      //todo: check this
       padding-bottom: 0;
     }
   }
@@ -137,6 +143,14 @@
     margin: 0;
     @include dishContent(364px, 40px, 24px, 0 55px 20px 55px, 0 30px, 112px);
 
+  }
+
+  @include tablet1 {
+    @include dishContent(364px, 32px, 20px, 0 55px 20px 55px, 0 30px, 112px);
+  }
+
+  @include tablet2 {
+    @include dishContent(364px, 26px, 18px, 0 10px 20px 10px, 0 30px, 112px);
   }
   //.dish_image{
   //  width: 380px;

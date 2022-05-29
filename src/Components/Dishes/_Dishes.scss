@@ -1,7 +1,7 @@
 
 .dishes_section {
   margin: 48px 0 0 0;
-  height: auto;
+  height: 100%;
   justify-content: space-between;
   align-items: flex-start;
   padding: 0;
@@ -37,8 +37,9 @@
 .dishes_card {
   width: 100%;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   overflow-x: scroll;
+  height: 100%;
 
   @include desktop{
     overflow-x: hidden;

@@ -1,21 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import Card from "../UI/Card/Card";
 import axios from "axios";
-import Dish from "../Dishes/Dish";
 import {Chef as ChefModel} from "../../Interfaces/Chef" ;
 
 const Chef = (props: any) => {
-
-
     const [chef, setChef] = useState<ChefModel>();
-
-
     const getChef = () => {
         axios.get("MockData/AllChefs.json").then((res: any) => {
             const result = res.data
-            // console.log(result[1].name)
-            // console.log(props.chef)
-            // console.log(props.chef === result[1].name)
             let i: number = 1;
             while (result[i] !== undefined){
                 if (result[i].name === props.chef){

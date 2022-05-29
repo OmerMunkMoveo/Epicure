@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  //justify-content: space-between;
   margin-left: 0;
   width: 100%;
   padding-left: 6.4%;
@@ -31,9 +31,20 @@
     color: inherit;
   }
 
-  .left_nav {
+  .left_nav{
+    flex-basis: 0;
+    flex-grow: 1;
     display: flex;
-    width: 60%;
+
+    @include desktop{
+      display: none;
+    }
+  }
+  .center_nav {
+    flex-basis: 0;
+    flex-grow: 0;
+    display: flex;
+    //width: 60%;
     justify-content: space-between;
     align-items: center;
     @include desktop {
@@ -93,7 +104,9 @@
   }
 
   .right_nav {
-    width: 50%;
+    flex: 0;
+    flex-grow: 1;
+    //width: 50%;
 
     display: flex;
     justify-content: flex-end;
@@ -219,9 +232,6 @@
 
 }
 
-//todo: use flex basis and flex grow to center the ion in the navigation bar i the mobile
-//todo: change the structure of the navigation to left center and right and fix all the deratives.
-//todo: add another cetner with an image that eredners on ly on the mobiel 
 
 
 

@@ -4,25 +4,55 @@ import Card from "../UI/Card/Card";
 import axios from "axios";
 import Button from "../UI/Button/Button";
 import Slider from "react-slick";
+import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
 
 const epochMonth: number = 86400000;
 
 const Restaurants = (props: any) => {
+
     const now = Date.now();
+
+    const {width, height} = useWindowDimensions();
     const [restaurants, setRestaurants] = useState<any>();
+    const [carouselSlidesToShow, setCarouselSlidesToShow] = useState(1);
+
+
+
+    useEffect(() => {
+
+        if (props.group === "most popular") {
+            getPopularRestaurant();
+        } else if (props.chef) {
+            getChefRestaurants();
+        } else if (props.group === 'all') {
+            getAllRestaurant();
+        } else if (props.group === "new") {
+            getNewRestaurant();
+        }
+    }, [props.group, props.chef])
+
+    useEffect(()=>{
+        if (width > 600){
+            setCarouselSlidesToShow(3)
+        } else {
+            setCarouselSlidesToShow(1)
+        }
+    },[width])
 
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: carouselSlidesToShow,
         slidesToScroll: 1
     }
-//todo: put in use effect and state the window
-    if (window.innerWidth >= 600){
-        settings.slidesToShow = 3
-    }
+
+
+
+
+
+
     let sliderRef = useRef<any>();
 
     const getAllRestaurant = () => {
@@ -80,18 +110,7 @@ const Restaurants = (props: any) => {
         })
     }
 
-    useEffect(() => {
 
-        if (props.group === "most popular") {
-            getPopularRestaurant();
-        } else if (props.chef) {
-            getChefRestaurants();
-        } else if (props.group === 'all') {
-            getAllRestaurant();
-        } else if (props.group === "new") {
-            getNewRestaurant();
-        }
-    }, [props.group, props.chef])
     if (props.carousel) {
         return (
             <section>

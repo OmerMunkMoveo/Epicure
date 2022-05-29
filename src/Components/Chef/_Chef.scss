@@ -65,6 +65,9 @@
     margin-left: 0;
     margin-right: 0;
   }
+  @include tablet3{
+    flex-direction: column;
+  }
   .body_text{
     margin-top: 24px;
     width: 100%;

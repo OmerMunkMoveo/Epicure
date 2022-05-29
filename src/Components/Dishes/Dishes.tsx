@@ -4,15 +4,17 @@ import Card from "../UI/Card/Card";
 import axios from "axios"
 import Button from "../UI/Button/Button";
 
+
 const Dishes = () => {
-    const [dishes, setDishes] = useState<any>();
+    const [dishes, setDishes] = useState<typeof Dish[] | JSX.Element[]>();
 
 
     const getAllDishes = () => {
         axios.get("MockData/AllDishes.json").then((res: any) => {
             const result = res.data
-            const rendered = Object.keys(result).map((keyName: any, i: any) => {
+            const rendered: typeof Dish[] | JSX.Element[]= Object.keys(result).map((keyName: string, i: number) => {
                 return (
+
                     <Dish key={i} data={result[keyName]}
                           className={'dish_signature'}></Dish>
                 )

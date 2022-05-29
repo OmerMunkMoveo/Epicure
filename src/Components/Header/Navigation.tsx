@@ -27,9 +27,9 @@ const Navigation = (props: any) => {
                              mobileMenuRef.current.style.opacity = '1';
                              mobileMenuRef.current.style.color = 'black';
                              mobileMenuRef.current.style.pointerEvents = 'auto';
-
-
                          }}/>
+                </div>
+                <div className="center_nav">
                     <NavLink to='' onClick={()=>{props.setActivePage('home_page')}} className="main_link">
                         <img src={LOGO} alt="epicure logo"/>
                         <div className='main_link_text'>epicure</div>
@@ -43,7 +43,6 @@ const Navigation = (props: any) => {
                         chefs
                     </NavLink>
                 </div>
-
                 <div className="right_nav">
                     {showSearch && <Input onBlur={() => {
                         setShowSearch((prevShowSearch) => !prevShowSearch)
