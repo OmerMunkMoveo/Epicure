@@ -26,8 +26,8 @@
   .footer_link {
     margin: 0;
     font-size: 18px;
-    font-weight: 200;
-    letter-spacing: 1.92px;
+    font-weight: $regular-weight;
+    letter-spacing: $letter-spacing-3;
 
     &:hover {
       cursor: pointer;

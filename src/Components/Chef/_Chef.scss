@@ -21,8 +21,8 @@
     position: absolute;
     display: flex;
     font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 2.67px;
+    font-weight: $bold-weight;
+    letter-spacing: $letter-spacing-5;
     width: 100%;
     justify-content: center;
     align-items: center;

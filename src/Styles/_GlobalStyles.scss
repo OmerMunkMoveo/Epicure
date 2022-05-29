@@ -4,6 +4,24 @@ $secondary-color1: #F9F4EA;
 $secondary-color2: #E19D1A;
 $secondary-color3: #FAFAFA;
 
+$letter-spacing-1: 1.23px;
+$letter-spacing-2: 1.35px;
+$letter-spacing-3: 1.92px;
+$letter-spacing-4: 1.97px;
+$letter-spacing-5: 2.67px;
+
+
+$regular-weight: 200;
+$bold-weight: 400;
+$selected-bold-weight: 1000;
+
+a, button, NavLink{
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+
 @mixin mobile {
   @media screen and (max-width: 600px) {
     @content
@@ -64,11 +82,11 @@ $secondary-color3: #FAFAFA;
   width: 100%;
 }
 
-.helper_header_align_center{
+.helper_header_align_center {
   text-align: center;
 }
 
-.helper_div_sides{
+.helper_div_sides {
   width: 83.3%;
   margin-left: 8.9%;
 }

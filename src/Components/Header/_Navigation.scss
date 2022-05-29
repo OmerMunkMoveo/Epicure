@@ -1,7 +1,5 @@
 .navbar {
   box-sizing: border-box;
-
-
   animation-name: bounceInRight;
   animation-duration: 1.3s;
   z-index: 10;
@@ -13,8 +11,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  //margin-left: 8.819444444%;
-  //width: 82.36111111%;
   margin-left: 0;
   width: 100%;
   padding-left: 6.4%;
@@ -33,10 +29,6 @@
     padding: 0 10px;
     text-decoration: none;
     color: inherit;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 
   .left_nav {
@@ -51,9 +43,9 @@
     .main_link {
       display: flex;
       text-transform: uppercase;
-      font-weight: 200;
+      font-weight: $regular-weight;
       font-size: 27px;
-      letter-spacing: 1.35px;
+      letter-spacing: $letter-spacing-2;
 
       &:hover {
         animation: blur;
@@ -75,11 +67,11 @@
     .secondary_link {
       display: none;
       text-transform: capitalize;
-      font-weight: 200;
+      font-weight: $regular-weight;
       font-size: 18px;
       border-bottom: 1.8px solid transparent;
       transition-duration: 0.15s;
-      letter-spacing: 1.92px;
+      letter-spacing: $letter-spacing-3;
 
       @include desktop {
         display: block;
@@ -169,7 +161,6 @@
   }
 
   opacity: 0;
-  //z-index: -2;
   transition-property: height, opacity;
   transition-duration: 0.5s;
   top: 0;
@@ -192,12 +183,9 @@
     color: inherit;
     text-transform: capitalize;
     font-size: 18px;
-    font-weight: 200;
-    letter-spacing: 1.92px;
+    font-weight: $regular-weight;
+    letter-spacing: $letter-spacing-3;
 
-    &:hover {
-      cursor: pointer;
-    }
   }
 
   .mobile_menu_section {
@@ -230,6 +218,10 @@
   }
 
 }
+
+//todo: use flex basis and flex grow to center the ion in the navigation bar i the mobile
+//todo: change the structure of the navigation to left center and right and fix all the deratives.
+//todo: add another cetner with an image that eredners on ly on the mobiel 
 
 
 

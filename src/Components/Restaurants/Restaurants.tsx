@@ -19,7 +19,7 @@ const Restaurants = (props: any) => {
         slidesToShow: 1,
         slidesToScroll: 1
     }
-
+//todo: put in use effect and state the window
     if (window.innerWidth >= 600){
         settings.slidesToShow = 3
     }

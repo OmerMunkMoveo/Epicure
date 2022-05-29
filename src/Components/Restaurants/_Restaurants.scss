@@ -7,28 +7,25 @@
   padding: 0;
   gap: 40px;
 
-  ul, li{
+  ul, li {
     list-style-type: none;
   }
 
-  .slick-slide{
-    //margin: 0 10px;
-  }
 
   button {
-    //margin-top: -27px;
     margin-right: 9%;
   }
-  h2{
+
+  h2 {
     padding-left: 20px;
-    @include desktop{
-      //todo: check this two properties
-      //margin: auto;
+    @include desktop {
+
       padding: inherit;
       margin-bottom: 40px;
     }
   }
-  @include desktop{
+
+  @include desktop {
     height: 100%;
     margin-top: 55px;
     align-items: center;
@@ -36,16 +33,15 @@
 
   }
 }
+
 .restaurants_card {
   height: 100%;
-  //margin-top: -40px;
   width: 100%;
-  //justify-content: space-between;
   justify-content: center;
   align-items: center;
   overflow-x: scroll;
-  @include desktop{
-    gap:24px;
+  @include desktop {
+    gap: 24px;
 
     width: 82.25%;
     overflow-x: hidden;
@@ -55,29 +51,32 @@
 
 .chef_of_the_week_restaurants_section {
   height: 350px;
-  .all_button{
+
+  .all_button {
     display: block;
     margin-top: 16px;
-    @include desktop{
+    @include desktop {
       display: none;
     }
   }
+
   margin-top: 20px;
   margin-bottom: 10px;
   width: 100%;
   justify-content: flex-start;
-  h2{
+
+  h2 {
     text-transform: capitalize;
     margin-bottom: 16px;
     padding-left: 20px;
-    @include desktop{
+    @include desktop {
       margin-bottom: 40px;
-      //todo: check the padding
       padding: 0;
 
     }
   }
-  @include desktop{
+
+  @include desktop {
     height: auto;
   }
 
@@ -86,22 +85,16 @@
 .chef_of_the_week_restaurants_card {
   justify-content: flex-start;
   overflow-x: scroll;
-  gap:16px;
-  @include desktop{
+  gap: 16px;
+  @include desktop {
     overflow-x: hidden;
   }
 
-  .restaurant{
-    //margin-right: 4px;
-    //padding-left: 20px;
-    @include desktop{
-      //todo: check the padding
+  .restaurant {
+    @include desktop {
       padding-left: 0;
-      //margin-right: 20px;
 
     }
   }
-  @include desktop{
-    //todo: check if overgflow-x needed
-  }
+
 }

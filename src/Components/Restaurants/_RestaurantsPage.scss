@@ -14,17 +14,15 @@
     text-transform: capitalize;
     text-decoration: none;
     font-size: 18px;
-    font-weight: 200;
-    letter-spacing: 1.92px;
+    font-weight: $bold-weight;
+    letter-spacing: $letter-spacing-3;
     color: black;
 
     .active_view {
-      font-weight: 1000;
+      font-weight: $selected-bold-weight;
     }
 
-    &:hover {
-      cursor: pointer;
-    }
+
   }
 }
 
@@ -42,13 +40,9 @@
   height: 60px;
 
   a {
-    font-weight: 200;
+    font-weight: $regular-weight;
     font-size: 18px;
     text-transform: capitalize;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 }
 

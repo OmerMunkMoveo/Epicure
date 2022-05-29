@@ -5,6 +5,8 @@ import CART from "../../Images/Icons/cart.svg"
 
 const SideCart = (props: any) => {
 
+
+
     return (
         <>
             <Modal active={props.showCart} toggleShow={props.sideCartToggle}

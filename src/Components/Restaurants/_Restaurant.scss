@@ -1,34 +1,22 @@
 .restaurant_chef {
   box-sizing: border-box;
-  //width: 245px;
   width: auto;
-  //height: 233px;
   height: auto;
-  //margin-left: 20px;
-  //margin-right: 4px;
   padding: 0 12px;
 
   @include desktop {
-    //width: 379px;
     width: 100%;
-    //height: 404px;
     height: auto;
-    //todo: check the margin here
     margin: 0;
     padding: 0 12px;
   }
 
   img {
-    //width: 245px;
     width: inherit;
-    //height: 152px;
     height: inherit;
     @include desktop {
-      //width: 379px;
       width: inherit;
       height: inherit;
-      //height: 236px;
-      //height: 58.5%;
 
     }
   }
@@ -46,14 +34,13 @@
     @include desktop {
       height: 169px;
       align-items: center;
-      //todo: check the padding
       padding-left: 0;
     }
 
     .text_restaurant_chef_primary {
       font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 2.67px;
+      font-weight: $bold-weight;
+      letter-spacing: $letter-spacing-5;
       margin: 0;
       padding: 3.5px;
       @include desktop {
@@ -63,8 +50,8 @@
 
     .text_restaurant_chef_secondary {
       font-size: 16px;
-      font-weight: 200;
-      letter-spacing: 1.97px;
+      font-weight: $regular-weight;
+      letter-spacing: $letter-spacing-4;
       margin: 0;
       padding: 3.5px;
       @include desktop {
@@ -92,14 +79,13 @@
     @include desktop {
       height: 169px;
       align-items: center;
-      //todo: check the padding
       padding: 0;
     }
 
     .text_restaurant_chef_primary {
       font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 2.67px;
+      font-weight: $bold-weight;
+      letter-spacing: $letter-spacing-5;
       margin: 0;
       padding: 3.5px;
       @include desktop {
@@ -109,8 +95,8 @@
 
     .text_restaurant_chef_secondary {
       font-size: 16px;
-      font-weight: 200;
-      letter-spacing: 1.97px;
+      font-weight: $regular-weight;
+      letter-spacing: $letter-spacing-4;
       margin: 0;
       padding: 3.5px;
       @include desktop {
@@ -138,9 +124,7 @@
     width: 245px;
     height: 150px;
     object-fit: cover;
-    //top:43px;
-    @include desktop{
-      //todo: check what to put here?
+    @include desktop {
     }
 
   }
@@ -163,26 +147,19 @@
 
   .text_restaurant_primary {
     text-align: center;
-    //width: 100%;
     font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 2.67px;
-    //margin: 0;
+    font-weight: $bold-weight;
+    letter-spacing: $letter-spacing-5;
     padding: 3.5px;
     @include desktop {
       font-size: 30px;
-      //padding-left: 16px;
     }
   }
 }
 
 
-
 .stars {
-  //todo: this is new
   display: none;
-  //todo: this is new
-
   padding: 0;
   margin: 0;
 
@@ -195,5 +172,4 @@
     display: flex;
   }
 }
-
 

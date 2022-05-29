@@ -1,13 +1,10 @@
-//todo: check all this class
 
 .dishes_section {
   margin: 48px 0 0 0;
-  //height: 100%;
   height: auto;
   justify-content: space-between;
   align-items: flex-start;
   padding: 0;
-  //gap: 40px;
   h2{
     display: flex;
     padding-left: 20px;
@@ -21,7 +18,6 @@
   @include desktop{
 
     align-items: center;
-    //height: 729px;
     height: 100%;
     margin-top: 55px;
     margin-bottom: 97px;
@@ -45,7 +41,6 @@
   overflow-x: scroll;
 
   @include desktop{
-    //todo: what about overflow-x?
     overflow-x: hidden;
     gap: 24px;
     overflow-y: hidden;

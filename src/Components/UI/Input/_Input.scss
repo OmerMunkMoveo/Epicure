@@ -35,7 +35,7 @@ $border-button-width: 0.5px;
     border: 0.5px solid black;
     font-size: 18px;
     letter-spacing: 1.29px;
-    font-weight: 200;
+    font-weight: $regular-weight;
     background-color: transparent;
 
   }
@@ -126,7 +126,7 @@ $border-button-width: 0.5px;
     border: 0.5px solid black;
     border-radius: 4px;
     font-size: 12px;
-    font-weight: 200;
+    font-weight: $regular-weight;
     letter-spacing: 1.29px;
 
     @include desktop {
@@ -136,12 +136,9 @@ $border-button-width: 0.5px;
       padding: 6px 0 6px 45px;
       align-items: center;
       display: flex;
-      //padding-left: 7.25%;
       font-size: 24px;
       margin: auto;
-      //margin-left: 14%;
 
-      //letter spacing??
     }
     &::placeholder {
       text-align: center;
@@ -172,8 +169,8 @@ $border-button-width: 0.5px;
   label {
     //display: none;
     font-size: 14px;
-    font-weight: 200;
-    letter-spacing: 1.97px;
+    font-weight: $regular-weight;
+    letter-spacing: $letter-spacing-4;
     text-align: center;
     color: $primary-color2;
   }
@@ -183,8 +180,8 @@ $border-button-width: 0.5px;
     padding: 0;
     display: flex;
     align-items: flex-end;
-    font-weight: 200;
-    letter-spacing: 1.97px;
+    font-weight: $regular-weight;
+    letter-spacing: $letter-spacing-4;
     font-size: 16px;
     background-color: transparent;
     outline: none;

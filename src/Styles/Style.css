@@ -1,6 +1,10 @@
 @import "animate.css/animate.min.css";
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+a:hover, button:hover, NavLink:hover {
+  cursor: pointer;
+}
+
 .header h1 {
   font-weight: 200;
   font-size: 24px;
@@ -910,9 +914,6 @@
   text-decoration: none;
   color: inherit;
 }
-.navbar NavLink:hover, .navbar a:hover {
-  cursor: pointer;
-}
 .navbar .left_nav {
   display: flex;
   width: 60%;
@@ -1051,9 +1052,6 @@
   font-size: 18px;
   font-weight: 200;
   letter-spacing: 1.92px;
-}
-.mobile_overlay_menu NavLink:hover, .mobile_overlay_menu a:hover {
-  cursor: pointer;
 }
 .mobile_overlay_menu .mobile_menu_section {
   display: flex;
@@ -1686,6 +1684,7 @@
     padding-left: 0;
   }
 }
+
 .dishes_section {
   margin: 48px 0 0 0;
   height: auto;
@@ -1843,6 +1842,11 @@
 .about_us_section .about_us_content img {
   width: 102px;
 }
+@media screen and (min-width: 600px) {
+  .about_us_section .about_us_content img {
+    width: auto;
+  }
+}
 .about_us_section .about_us_content .about_us_links_mobile {
   margin-top: 32px;
   margin-bottom: 48px;
@@ -1851,6 +1855,11 @@
   flex-direction: column;
   width: 32%;
   justify-content: space-between;
+}
+@media screen and (min-width: 600px) {
+  .about_us_section .about_us_content .about_us_links_mobile {
+    display: none;
+  }
 }
 .about_us_section .about_us_content .about_us_links_mobile img {
   width: 180px;
@@ -1945,7 +1954,6 @@
   width: 145px;
   font-weight: 200;
   text-align: center;
-  font-size: 16px;
   letter-spacing: 1.97px;
   text-transform: uppercase;
   opacity: 0.5;
@@ -1996,15 +2004,12 @@
   text-transform: capitalize;
   text-decoration: none;
   font-size: 18px;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 1.92px;
   color: black;
 }
 .restaurants_view a .active_view {
   font-weight: 1000;
-}
-.restaurants_view a:hover {
-  cursor: pointer;
 }
 
 .restaurants_filter {
@@ -2024,9 +2029,6 @@
   font-weight: 200;
   font-size: 18px;
   text-transform: capitalize;
-}
-.restaurants_filter a:hover {
-  cursor: pointer;
 }
 
 .all_restaurants {

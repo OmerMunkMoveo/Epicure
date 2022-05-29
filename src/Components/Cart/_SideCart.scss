@@ -32,10 +32,9 @@
     bottom: 45px;
     width: 145px;
 
-    font-weight: 200;
+    font-weight: $regular-weight;
     text-align: center;
-    font-size: 16px;
-    letter-spacing: 1.97px;
+    letter-spacing: $letter-spacing-4;
     text-transform: uppercase;
     opacity: 0.5;
     @include desktop{

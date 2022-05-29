@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import './Styles/Style.css'
 
@@ -51,4 +51,6 @@ export default App;
 
 //#TODO: place holder , start typing from the let in the input n the headr
 //todo: font weight
+
+//TODO: fic the issue with the dish, that the shole cards will adjust by the biggest
 

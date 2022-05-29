@@ -1,4 +1,5 @@
 .about_us_section {
+
   height: 100%;
   padding: 24px 20px 48px;
   box-sizing: border-box;
@@ -22,6 +23,7 @@
 
   .about_us_content {
     justify-content: space-between;
+
 
     h2 {
       display: flex;
@@ -51,9 +53,15 @@
 
     img {
       width: 102px;
+      @include desktop{
+        width: auto;
+      }
     }
 
     .about_us_links_mobile {
+      @include desktop{
+        display: none;
+      }
       margin-top: 32px;
       margin-bottom: 48px;
       gap: 20px;
@@ -78,7 +86,6 @@
 
   .about_us_links {
     display: none;
-    //width: 32%;
     justify-content: flex-start;
     gap: 16px;
 

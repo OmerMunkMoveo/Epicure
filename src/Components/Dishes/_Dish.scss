@@ -34,8 +34,8 @@
       .dish_text_primary {
         text-transform: capitalize;
         font-size: $dishPrimaryFontSize;
-        letter-spacing: 2.67px;
-        font-weight: 400;
+        letter-spacing: $letter-spacing-5;
+        font-weight: $bold-weight;
         padding: $dishPrimaryFontPadding;
         text-align: center;
 
@@ -45,8 +45,8 @@
         margin-top: -15px;
         text-align: left;
         font-size: $dishSecondaryFontSize;
-        letter-spacing: 1.97px;
-        font-weight: 200;
+        letter-spacing: $letter-spacing-4;
+        font-weight: $regular-weight;
         min-height: 100px;
         padding: $dishSecondaryFontPadding;
 
@@ -77,10 +77,10 @@
       .dish_text_price {
         display: flex;
         font-size: $dishSecondaryFontSize;
-        letter-spacing: 1.97px;
-        font-weight: 400;
+        letter-spacing: $letter-spacing-4;
+        font-weight: $bold-weight;
         @include desktop {
-          font-weight: 200;
+          font-weight: $regular-weight;
         }
         gap: 4px;
       }
