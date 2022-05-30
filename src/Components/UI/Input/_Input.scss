@@ -1,11 +1,33 @@
 $border-button-width: 0.5px;
-.search_bar{
+.search_bar {
+  animation-name: rollIn;
+  animation-duration: 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 413px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: white;
 
-  margin-right: -45px;
-  input[type="text"]{
+  img {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 20px;
+  }
+
+  h1 {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  input[type="text"] {
+    width: 100%;
     box-sizing: border-box;
     display: flex;
-    width:410px;
     align-items: center;
     height: 41px;
     border-radius: 4px;
@@ -13,57 +35,126 @@ $border-button-width: 0.5px;
     border: 0.5px solid black;
     font-size: 18px;
     letter-spacing: 1.29px;
-    font-weight: 200;
+    font-weight: $regular-weight;
+    background-color: transparent;
+
   }
 
+  @include desktop {
+    margin-right: -45px;
+    position: relative;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+
+    input[type="text"] {
+      width: 410px;
+    }
+    img {
+      display: none;
+    }
+    h1 {
+      display: none;
+    }
+  }
 }
 
-.header_search{
-  width: 149%;
+.header_search {
+  .wrapping_label {
+    &:focus-within {
+
+      animation-name: input_focus;
+      animation-duration: 500ms;
+
+    }
+  }
+  width: 100%;
   display: flex;
   align-items: center;
-  margin-top: 14px;
-  img{
+  margin-top: -50px;
+
+  @include desktop {
+    width: 149%;
+    margin-top: 14px;
+  }
+  @include tablet3{
+    width: 100%;
+  }
+
+  .header {
+    h1 {
+      display: none;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  img {
     position: absolute;
-    margin-left: 11% ;
-    margin-top: 9px;
-  }
-  @include mobile{
-    margin-top: -50px;
+    margin-left: 12px;
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+    @include desktop {
+      width: 32px;
+      height: 32px;
+      margin-top: 9px;
+    }
   }
 
-  label{
-    width: 90%;
-    margin-left: 5%;
+  label {
+    width: 100%;
+    margin: 0;
+    @include desktop {
+      width: auto;
+      margin: auto;
+
+    }
   }
 
-  input[type="text"]{
+  input[type="text"] {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 16px;
-    height: 48px;
-    //padding: 6px 50px;
-    //width: 430px;
-    padding: 6px 0;
-    padding-left: 7.25%;
-    width: 64.3%;
-    margin-left: 14%;
+    height: 30px;
+    padding: 0 30px 0 30px;
+    margin: 0 0 0 0;
+    width: 100%;
     background-color: transparent;
     border: 0.5px solid black;
     border-radius: 4px;
-    font-size: 24px;
-    font-weight: 200;
-    &::placeholder{
-      text-align: center;
+    font-size: 12px;
+    font-weight: $regular-weight;
+    letter-spacing: 1.29px;
+
+    @include desktop {
+      box-sizing: border-box;
+      width: 505px;
+      height: 48px;
+      padding: 6px 0 6px 45px;
+      align-items: center;
+      display: flex;
+      font-size: 24px;
+      margin: auto;
+
     }
-    @include mobile{
-      width: 280px;
-      height: 30px;
-      padding: 6px 12px;
-      font-size: 12px;
-      text-align: center;
+    @include tablet3{
+      font-size: 16px;
+      padding: 0 0 0 45px;
+      width: 370px;
     }
+    &::placeholder {
+      text-align: center;
+      @include desktop{
+        text-align: left;
+      }
+    }
+
 
 
   }
@@ -86,8 +177,8 @@ $border-button-width: 0.5px;
   label {
     //display: none;
     font-size: 14px;
-    font-weight: 200;
-    letter-spacing: 1.97px;
+    font-weight: $regular-weight;
+    letter-spacing: $letter-spacing-4;
     text-align: center;
     color: $primary-color2;
   }
@@ -97,8 +188,8 @@ $border-button-width: 0.5px;
     padding: 0;
     display: flex;
     align-items: flex-end;
-    font-weight: 200;
-    letter-spacing: 1.97px;
+    font-weight: $regular-weight;
+    letter-spacing: $letter-spacing-4;
     font-size: 16px;
     background-color: transparent;
     outline: none;
@@ -248,3 +339,6 @@ $border-button-width: 0.5px;
   border-radius: 50%;
   background: black;
 }
+
+
+

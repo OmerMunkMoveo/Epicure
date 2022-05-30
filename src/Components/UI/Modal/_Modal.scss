@@ -2,14 +2,30 @@
   top:0;
   position: fixed;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   z-index: 15;
   background-color: rgba(0, 0, 0, 0.67);
 }
+
+
 
 .modal{
   position: fixed;
   background-color: white;
   z-index: 16;
+}
+
+.active_modal{
+  animation-name: modal_backdrop_in;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+}
+
+.inactive_modal{
+  animation-name: modal_backdrop_out;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  z-index: -1;
 }
 

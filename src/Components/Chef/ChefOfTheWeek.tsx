@@ -20,7 +20,6 @@ const ChefOfTheWeek = (props: any) => {
 
                 <Chef setChef={setChef} chef={props.chef} ></Chef>
                 </div>
-
                 <div className="body_text">
                     Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades,
                     including running the kitchen in his first restaurant, the fondly-remembered Violet, located in

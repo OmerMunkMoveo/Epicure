@@ -4,33 +4,43 @@ import './Styles/Style.css'
 
 import Navigation from "./Components/Header/Navigation";
 import Footer from "./Components/Footer/Footer";
-import Header from "./Components/Header/Header";
-import Restaurants from "./Components/Restaurants/Restaurants";
-import Dishes from "./Components/Dishes/Dishes";
-import Icons from "./Components/Icons/Icons";
-import ChefOfTheWeek from "./Components/Chef/ChefOfTheWeek";
-import AboutUs from "./Components/AboutUs/AboutUs";
 import SideCart from "./Components/Cart/SideCart";
 import {Route, Routes} from "react-router-dom";
 import HomePage from "./Components/HomePage/HomePage";
-import RestaurantsPage from "./Components/Restaurants/RestaurantsPage";
+// import RestaurantsPage from "./Components/Restaurants/RestaurantsPage";
 
 function App() {
 
     const [showSideCart, setShowSideCart] = useState<boolean>(false);
-    const toggleShowSideCart = () =>{
+    const [activePage, setActivePage] = useState<string>('home_page');
+    const [cartFirstClick, setCartFirstClick] = useState<boolean>();
+
+
+    const toggleShowSideCart = () => {
+        if (!cartFirstClick) {
+            setCartFirstClick(pervState => !pervState)
+        }
+
         setShowSideCart(prevState => !prevState)
+
     }
 
+    console.log(activePage)
     return (
         <>
-            <Navigation sideCartToggle={toggleShowSideCart}></Navigation>
+            <Navigation activePage={activePage} setActivePage={setActivePage}
+                        sideCartToggle={toggleShowSideCart}></Navigation>
             <Routes>
-                <Route path='' element={<HomePage />}/>
-                <Route path='/restaurants' element={<RestaurantsPage/>}/>
+                <Route path='' element={<HomePage/>}/>
+                {/*<Route path='/restaurants' element={<RestaurantsPage/>}/>*/}
+                <Route path='/restaurants' element={<h1><br/><br/>Restaurant's Section</h1>}/>
+                <Route path='/chefs' element={<h1><br/><br/>Chef's Section</h1>}/>
+                <Route path='/user' element={<h1><br/><br/>User's Section</h1>}/>
+                <Route path='/terms_of_use' element={<h1><br/><br/>Terms of use Section</h1>}/>
+                <Route path='/privacy_policy' element={<h1><br/><br/>Privacy policy Section</h1>}/>
             </Routes>
             <Footer></Footer>
-            {showSideCart && <SideCart sideCartToggle={toggleShowSideCart} ></SideCart> }
+            {cartFirstClick && < SideCart showCart={showSideCart} sideCartToggle={toggleShowSideCart}></SideCart>}
 
         </>
     );
@@ -38,6 +48,5 @@ function App() {
 
 export default App;
 
-//#TODO: place holder , start typing from the let in the input n the headr
-//todo: font weight
+
 

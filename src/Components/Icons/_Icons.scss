@@ -1,28 +1,44 @@
-.icons_section{
+.icons_section {
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  gap:32px;
-  height: 265px;
+  gap: 32px;
+  height: 584px;
   background-color: #FAFAFA;
-  margin-bottom: 105px;
   padding-bottom: -20px;
+  margin-top: 46px;
+  margin-bottom: 48px;
 
-  h2{
-    margin-top: 35px;
+  @include desktop {
+    margin-top: 0;
+    height: 265px;
+    margin-bottom: 105px;
+
+  }
+
+  h2 {
+    font-size: 18px;
+    @include desktop {
+      font-size: 30px;
+    }
   }
 
 }
 
-.icons_card{
+.icons_card {
   margin-top: -23px;
-
   width: 30%;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+  @include desktop {
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
-.icon_frame{
-  justify-content: center;
+.icon_frame {
   align-items: center;
   height: 120px;
   justify-content: space-between;

@@ -1,45 +1,101 @@
+
 .restaurants_section {
-  ul, li{
-    list-style-type: none;
-  }
-  margin-top: 55px;
-  height: 555px;
+  height: auto;
+  margin-top: 48px;
+  align-items: flex-start;
   justify-content: space-between;
-  align-items: center;
   padding: 0;
   gap: 40px;
 
+  ul, li {
+    list-style-type: none;
+  }
+
+
   button {
-    margin-top: -27px;
     margin-right: 9%;
+  }
+
+  h2 {
+    padding-left: 20px;
+    @include desktop {
+
+      padding: inherit;
+      margin-bottom: 40px;
+    }
+  }
+
+  @include desktop {
+    height: 100%;
+    margin-top: 55px;
+    align-items: center;
+    gap: 40px;
+
   }
 }
 
 .restaurants_card {
-  margin-top: -40px;
-  width: 82.25%;
-  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
   align-items: center;
-  @include mobile {
-    overflow-x: scroll;
+  overflow-x: scroll;
+  @include desktop {
+    gap: 24px;
+
+    width: 82.25%;
+    overflow-x: hidden;
   }
 }
 
 
 .chef_of_the_week_restaurants_section {
+  height: 350px;
+
+  .all_button {
+    display: block;
+    margin-top: 16px;
+    @include desktop {
+      display: none;
+    }
+  }
+
   margin-top: 20px;
   margin-bottom: 10px;
   width: 100%;
   justify-content: flex-start;
-  h2{
+
+  h2 {
     text-transform: capitalize;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
+    padding-left: 20px;
+    @include desktop {
+      margin-bottom: 40px;
+      padding: 0;
+
+    }
   }
+
+  @include desktop {
+    height: auto;
+  }
+
 }
 
 .chef_of_the_week_restaurants_card {
   justify-content: flex-start;
-  .restaurant{
-    margin-right: 20px;
+  overflow-x: scroll;
+  gap: 16px;
+  @include desktop {
+    overflow-x: hidden;
   }
+
+
+  .restaurant {
+    @include desktop {
+      padding-left: 0;
+
+    }
+  }
+
 }
