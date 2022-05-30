@@ -54,7 +54,6 @@ const Restaurants = (props: any) => {
 
 
     let sliderRef = useRef<any>();
-
     const getAllRestaurant = () => {
         axios.get("MockData/AllRestaurants.json").then((res: any) => {
             const result = res.data
