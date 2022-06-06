@@ -2,6 +2,7 @@ import React from "react"
 import Modal from "../UI/Modal/Modal";
 import Button from "../UI/Button/Button";
 import CART from "../../Images/Icons/cart.svg"
+import ConfettiTest from "../ConfettiTest";
 
 const SideCart = (props: any) => {
 
@@ -16,6 +17,7 @@ const SideCart = (props: any) => {
                     your bag is empty
                 </p>
                 <Button className="secondary_button">order history</Button>
+                <ConfettiTest/>
 
             </Modal>
         </>

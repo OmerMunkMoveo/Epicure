@@ -6,6 +6,7 @@ import ChefOfTheWeek from "../Chef/ChefOfTheWeek";
 import AboutUs from "../AboutUs/AboutUs";
 import {AnimationOnScroll} from "react-animation-on-scroll";
 
+
 const HomePage = () => {
 
     return (
