@@ -7,7 +7,7 @@ import Footer from "./Components/Footer/Footer";
 import SideCart from "./Components/Cart/SideCart";
 import {Route, Routes} from "react-router-dom";
 import HomePage from "./Components/HomePage/HomePage";
-// import RestaurantsPage from "./Components/Restaurants/RestaurantsPage";
+import RestaurantsPage from "./Components/Restaurants/RestaurantsPage";
 
 function App() {
 
@@ -32,8 +32,8 @@ function App() {
                         sideCartToggle={toggleShowSideCart}></Navigation>
             <Routes>
                 <Route path='' element={<HomePage/>}/>
-                {/*<Route path='/restaurants' element={<RestaurantsPage/>}/>*/}
-                <Route path='/restaurants' element={<h1><br/><br/>Restaurant's Section</h1>}/>
+                <Route path='/restaurants' element={<RestaurantsPage/>}/>
+                {/*<Route path='/restaurants' element={<h1><br/><br/>Restaurant's Section</h1>}/>*/}
                 <Route path='/chefs' element={<h1><br/><br/>Chef's Section</h1>}/>
                 <Route path='/user' element={<h1><br/><br/>User's Section</h1>}/>
                 <Route path='/terms_of_use' element={<h1><br/><br/>Terms of use Section</h1>}/>
