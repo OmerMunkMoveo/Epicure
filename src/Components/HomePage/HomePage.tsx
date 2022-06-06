@@ -21,7 +21,7 @@ const HomePage = () => {
             </AnimationOnScroll>
                 <Icons></Icons>
             <AnimationOnScroll animateIn="animate__slideInRight" animateOut="animate__slideOutLeft">
-                <ChefOfTheWeek chef="yossi shitrit"></ChefOfTheWeek>
+                <ChefOfTheWeek></ChefOfTheWeek>
 
             </AnimationOnScroll  >
             <AnimationOnScroll animateIn="animate__fadeIn" animateOut="animate__fadeOut">

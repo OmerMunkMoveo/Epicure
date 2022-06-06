@@ -12,11 +12,11 @@ const Dish = (props: any) => {
     const dishToRender: DishModel = {
         name: props.data.name,
         description: props.data.description,
+        restaurant: props.data.restaurant,
         img: props.data.img,
         price: props.data.price,
-        properties: {
-            ...props.data.properties
-        }
+        properties: props.data.properties,
+        signature: props.data.signature
     }
 
     const [dish, setDish] = useState<DishModel>(dishToRender);

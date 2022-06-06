@@ -5,6 +5,7 @@ import axios from "axios";
 import Button from "../UI/Button/Button";
 import Slider from "react-slick";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
+import {serverURL} from "../../utils/urls";
 
 
 const epochMonth: number = 86400000;
@@ -80,11 +81,26 @@ const Restaurants = (props: any) => {
             setRestaurants(rendered)
         })
     }
+    // const getPopularRestaurant = () => {
+    //     axios.get("MockData/AllRestaurants.json").then((res: any) => {
+    //         const result = res.data
+    //         const rendered = Object.keys(result).map((keyName: any, i: any) => {
+    //             if (result[keyName].popular === "true") {
+    //                 return (
+    //                     <li><Restaurant key={i} data={result[keyName]}
+    //                                     className="restaurant_chef"></Restaurant></li>
+    //                 )
+    //             }
+    //         })
+    //         setRestaurants(rendered)
+    //     })
+    // }
     const getPopularRestaurant = () => {
-        axios.get("MockData/AllRestaurants.json").then((res: any) => {
-            const result = res.data
+        axios.get(`${serverURL}/restaurants`).then((res: any) => {
+            const result = res.data.data
+            console.log(result)
             const rendered = Object.keys(result).map((keyName: any, i: any) => {
-                if (result[keyName].popular === "true") {
+                if (result[keyName].popular) {
                     return (
                         <li><Restaurant key={i} data={result[keyName]}
                                         className="restaurant_chef"></Restaurant></li>

@@ -1,12 +1,36 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Card from "../UI/Card/Card";
 import Chef from "./Chef";
 import Restaurants from "../Restaurants/Restaurants";
 import {Chef as ChefModel} from "../../Interfaces/Chef";
+import axios from "axios";
+import {serverURL} from "../../utils/urls";
 
 const ChefOfTheWeek = (props: any) => {
-    const [chef, setChef] = useState<ChefModel>();
+    const [chef, setChef] = useState<any>();
+    const getChef = () => {
+        axios.get(`${serverURL}/chefs`).then((res: any) => {
+            const result = res.data.data[0]
 
+            const chefToRender: ChefModel = {
+                name: result.name,
+                description: result.description,
+                img: result.img,
+                chefOfTheWeek: result.chefOfTheWeek
+            }
+            setChef(chefToRender)
+
+
+        }).catch((err) => {
+            console.log(err)
+        })
+    }
+
+    getChef()
+    useEffect(() => {
+        getChef();
+
+    }, [])
 
     return (
         <Card className="card column chef_of_the_week_section">
@@ -17,17 +41,13 @@ const ChefOfTheWeek = (props: any) => {
             </div>
             <Card className="card row chef_of_the_week_info">
                 <div className="chef_of_the_week_image">
-
-                <Chef setChef={setChef} chef={props.chef} ></Chef>
+                    {chef &&<Chef chef={chef}></Chef>}
                 </div>
                 <div className="body_text">
-                    Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades,
-                    including running the kitchen in his first restaurant, the fondly-remembered Violet, located in
-                    Moshav Udim. Shitrit's creativity and culinary acumen born of long experience are expressed in the
-                    every detail of each and every dish.
+                    {chef && chef.description}
                 </div>
             </Card>
-            <Restaurants chef={chef}></Restaurants>
+            {/*<Restaurants chef={chef}></Restaurants>*/}
         </Card>
     )
 }
