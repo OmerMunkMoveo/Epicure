@@ -3,19 +3,36 @@ import Dish from "./Dish";
 import Card from "../UI/Card/Card";
 import axios from "axios"
 import Button from "../UI/Button/Button";
+import {serverURL} from "../../utils/urls";
+import {log} from "util";
 
 
-const Dishes = () => {
+const Dishes = (props: any) => {
     const [dishes, setDishes] = useState<typeof Dish[] | JSX.Element[]>();
 
 
-    const getAllDishes = () => {
-        axios.get("MockData/AllDishes.json").then((res: any) => {
-            const result = res.data
-            const rendered: typeof Dish[] | JSX.Element[]= Object.keys(result).map((keyName: string, i: number) => {
-                return (
+    // const getAllDishes = () => {
+    //     axios.get("MockData/AllDishes.json").then((res: any) => {
+    //         const result = res.data
+    //         const rendered: typeof Dish[] | JSX.Element[]= Object.keys(result).map((keyName: string, i: number) => {
+    //             return (
+    //
+    //                 <Dish key={i} data={result[keyName]}
+    //                       className={'dish_signature'}></Dish>
+    //             )
+    //         })
+    //         setDishes(rendered)
+    //     })
+    // }
 
-                    <Dish key={i} data={result[keyName]}
+    const getSignatureDishes = () => {
+        axios.get(`${serverURL}/dishes`).then((res: any) => {
+            const result = res.data.data
+            console.log(result)
+            const rendered: typeof Dish[] | JSX.Element[]= result.map((dish: any, i: number) => {
+                console.log(result[i])
+                return (
+                    <Dish key={i} data={result[i]}
                           className={'dish_signature'}></Dish>
                 )
             })
@@ -25,7 +42,9 @@ const Dishes = () => {
 
 
     useEffect(() => {
-        getAllDishes();
+        if (props.group === "signature"){
+            getSignatureDishes()
+        }
 
     }, [])
 

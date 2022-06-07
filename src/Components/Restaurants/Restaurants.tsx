@@ -95,10 +95,11 @@ const Restaurants = (props: any) => {
     //         setRestaurants(rendered)
     //     })
     // }
+
     const getPopularRestaurant = () => {
         axios.get(`${serverURL}/restaurants`).then((res: any) => {
+
             const result = res.data.data
-            console.log(result)
             const rendered = Object.keys(result).map((keyName: any, i: any) => {
                 if (result[keyName].popular) {
                     return (

@@ -10,7 +10,7 @@ const ChefOfTheWeek = (props: any) => {
     const [chef, setChef] = useState<any>();
     const getChef = () => {
         axios.get(`${serverURL}/chefs`).then((res: any) => {
-            const result = res.data.data[0]
+            const result = res.data.data.find((chef:any)=>chef.chefOfTheWeek===true)
 
             const chefToRender: ChefModel = {
                 name: result.name,
@@ -26,11 +26,11 @@ const ChefOfTheWeek = (props: any) => {
         })
     }
 
-    getChef()
+    // getChef()
     useEffect(() => {
         getChef();
 
-    }, [])
+    }, [,])
 
     return (
         <Card className="card column chef_of_the_week_section">
