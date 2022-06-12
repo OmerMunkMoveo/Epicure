@@ -3,9 +3,11 @@ import Dish from "./Dish";
 import Card from "../UI/Card/Card";
 import axios from "axios"
 import Button from "../UI/Button/Button";
+import {serverURL} from "../../utils/urls";
+import {log} from "util";
 
 
-const Dishes = () => {
+const Dishes = (props: any) => {
     const [dishes, setDishes] = useState<typeof Dish[] | JSX.Element[]>();
 
 
@@ -23,9 +25,26 @@ const Dishes = () => {
         })
     }
 
+    const getSignatureDishes = () => {
+        axios.get(`${serverURL}/dishes`).then((res: any) => {
+            const result = res.data.data
+            console.log(result)
+            const rendered: typeof Dish[] | JSX.Element[]= result.map((dish: any, i: number) => {
+                console.log(result[i])
+                return (
+                    <Dish key={i} data={result[i]}
+                          className={'dish_signature'}></Dish>
+                )
+            })
+            setDishes(rendered)
+        })
+    }
+
 
     useEffect(() => {
-        getAllDishes();
+        if (props.group === "signature"){
+            getSignatureDishes()
+        }
 
     }, [])
 

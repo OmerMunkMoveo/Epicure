@@ -25,7 +25,6 @@ function App() {
 
     }
 
-    console.log(activePage)
     return (
         <>
             <Navigation activePage={activePage} setActivePage={setActivePage}

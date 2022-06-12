@@ -8,15 +8,14 @@ import {Dish as DishModel} from "../../Interfaces/Dish"
 
 
 const Dish = (props: any) => {
-
     const dishToRender: DishModel = {
         name: props.data.name,
         description: props.data.description,
+        restaurant: props.data.restaurant.name,
         img: props.data.img,
         price: props.data.price,
-        properties: {
-            ...props.data.properties
-        }
+        properties: props.data.properties,
+        signature: props.data.signature
     }
 
     const [dish, setDish] = useState<DishModel>(dishToRender);
@@ -29,7 +28,7 @@ const Dish = (props: any) => {
 
     return (
         <Card className={`card column ${props.className}`}>
-            <img className="dish_image" src={`/Images/Dishes/${dish.img}.png`} alt="smoked_pizza"/>
+            <img className="dish_image" src={`/Images/Dishes/${dish.img}.png`} alt={`${dish.img}`}/>
             <div className="dish_info">
                 <div className="dish_text">
                     <div className="dish_text_primary">
@@ -40,11 +39,10 @@ const Dish = (props: any) => {
                     </div>
                 </div>
                 <div className="dish_props">
-                    {Object.keys(dish.properties).map((keyName:any, i: number) => {
-                        console.log(keyName, i)
+                    {dish.properties && dish.properties.trim().split(',').map((property, index) => {
                         return(
-                            <img key={i} src={eval(String(dish.properties[keyName]).toUpperCase())}
-                                 alt={eval(String(dish.properties[keyName]).toUpperCase())}/>
+                            <img key={index} src={eval(String(property).toUpperCase())}
+                                 alt={eval(String(property).toUpperCase())}/>
                         )
                     })}
                 </div>

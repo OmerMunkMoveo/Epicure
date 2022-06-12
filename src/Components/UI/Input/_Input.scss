@@ -68,6 +68,7 @@ $border-button-width: 0.5px;
 
     }
   }
+
   width: 100%;
   display: flex;
   align-items: center;
@@ -77,7 +78,7 @@ $border-button-width: 0.5px;
     width: 149%;
     margin-top: 14px;
   }
-  @include tablet3{
+  @include tablet3 {
     width: 100%;
   }
 
@@ -143,18 +144,18 @@ $border-button-width: 0.5px;
       margin: auto;
 
     }
-    @include tablet3{
+    @include tablet3 {
       font-size: 16px;
       padding: 0 0 0 45px;
       width: 370px;
     }
+
     &::placeholder {
       text-align: center;
-      @include desktop{
+      @include desktop {
         text-align: left;
       }
     }
-
 
 
   }
@@ -338,6 +339,29 @@ $border-button-width: 0.5px;
   height: 12px;
   border-radius: 50%;
   background: black;
+}
+
+
+.search_dropdown {
+
+  background-color: rgba(255, 255, 255, 0.88);
+
+  .link{
+    text-decoration: none;
+    color: black;
+  }
+
+
+
+  li {
+
+    list-style: none;
+    padding: 5px;
+
+    &:hover {
+      background-color: rgba(0, 172, 255, 0.2);
+    }
+  }
 }
 
 

@@ -152,6 +152,7 @@ a:hover, button:hover, NavLink:hover {
   background-color: white;
   width: 206px;
   height: 48px;
+  padding: 5px 10px;
   gap: 10px;
   border: 1px #000000 solid;
   transition-duration: 0.2s;
@@ -547,6 +548,21 @@ a:hover, button:hover, NavLink:hover {
   height: 12px;
   border-radius: 50%;
   background: black;
+}
+
+.search_dropdown {
+  background-color: rgba(255, 255, 255, 0.88);
+}
+.search_dropdown .link {
+  text-decoration: none;
+  color: black;
+}
+.search_dropdown li {
+  list-style: none;
+  padding: 5px;
+}
+.search_dropdown li:hover {
+  background-color: rgba(0, 172, 255, 0.2);
 }
 
 .card {

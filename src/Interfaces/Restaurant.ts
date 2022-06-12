@@ -35,7 +35,8 @@ export interface Restaurant {
             close: string
         },
     }
-    address: string
+    address: string,
+    image: string
 }
 
 
