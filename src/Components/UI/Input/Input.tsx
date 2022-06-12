@@ -29,7 +29,7 @@ const Input = (props: any) => {
         let value = event.target.value
         axios.get(`${serverURL}/search/all/${value}`).then((res: any) => {
             setResults(res.data.data)
-            console.log(res.data.data)
+
 
         })
 
@@ -103,9 +103,9 @@ const Input = (props: any) => {
             {showDropDown &&
                 <div className="search_dropdown">
                     <ul>
-                        {renderedResults && renderedResults.map(((item: any, index: number) =>
+                        {renderedResults && renderedResults.map(((item: any) =>
                                 <NavLink className='link' to={`/${item.type}/${item.id}`}>
-                                    <li key={index}>{item.display}</li>
+                                    <li key={item.id}>{item.display}</li>
                                 </NavLink>
                         )).slice(0, 7)}
                     </ul>

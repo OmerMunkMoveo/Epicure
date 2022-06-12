@@ -8,7 +8,6 @@ import {Dish as DishModel} from "../../Interfaces/Dish"
 
 
 const Dish = (props: any) => {
-    // console.log(props.data.properties.split(','))
     const dishToRender: DishModel = {
         name: props.data.name,
         description: props.data.description,
@@ -40,12 +39,12 @@ const Dish = (props: any) => {
                     </div>
                 </div>
                 <div className="dish_props">
-                    {dish.properties ? dish.properties.trim().split(',').map((property, index) => {
+                    {dish.properties && dish.properties.trim().split(',').map((property, index) => {
                         return(
                             <img key={index} src={eval(String(property).toUpperCase())}
                                  alt={eval(String(property).toUpperCase())}/>
                         )
-                    }): ''}
+                    })}
                 </div>
                 <div className="dish_price">
                     <hr className="dish_line"/>

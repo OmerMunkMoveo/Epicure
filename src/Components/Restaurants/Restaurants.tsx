@@ -81,20 +81,7 @@ const Restaurants = (props: any) => {
             setRestaurants(rendered)
         })
     }
-    // const getPopularRestaurant = () => {
-    //     axios.get("MockData/AllRestaurants.json").then((res: any) => {
-    //         const result = res.data
-    //         const rendered = Object.keys(result).map((keyName: any, i: any) => {
-    //             if (result[keyName].popular === "true") {
-    //                 return (
-    //                     <li><Restaurant key={i} data={result[keyName]}
-    //                                     className="restaurant_chef"></Restaurant></li>
-    //                 )
-    //             }
-    //         })
-    //         setRestaurants(rendered)
-    //     })
-    // }
+
 
     const getPopularRestaurant = () => {
         axios.get(`${serverURL}/restaurants`).then((res: any) => {
