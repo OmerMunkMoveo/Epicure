@@ -9,8 +9,9 @@ import {serverURL} from "../../utils/urls";
 const ChefOfTheWeek = (props: any) => {
     const [chef, setChef] = useState<any>();
     const getChef = () => {
-        axios.get(`${serverURL}/chefs`).then((res: any) => {
-            const result = res.data.data.find((chef:any)=>chef.chefOfTheWeek===true)
+        axios.get(`${serverURL}/chefs/chef_of_the_week`).then((res: any) => {
+            const result = res.data.data.chef
+            console.log(result)
 
             const chefToRender: ChefModel = {
                 name: result.name,
