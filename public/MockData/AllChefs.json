@@ -2,21 +2,11 @@
   "1": {
     "name": "yossi shitrit",
     "description": "Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including running the kitchen in his first restaurant, the fondly-remembered Violet, located in Moshav Udim. Shitrit's creativity and culinary acumen born of long experience are expressed in the every detail of each and every dish.",
-    "img": "yossi_shitrit.png",
-    "restaurants": {
-      "1": "onza",
-      "2": "kitchen market",
-      "3": "mashya"
-    }
+    "img": "yossi_shitrit.png"
   },
   "2": {
     "name": "asaf granit",
-    "description": "",
-    "img": "asaf_granit.png",
-    "restaurants": {
-      "1": "",
-      "2": "",
-      "3": ""
-    }
+    "description": "Chef Asaf Granit has been living and breathing his culinary dreams for more than two decades, including running the kitchen in his first restaurant, the fondly-remembered Violet, located in Moshav Udim. Shitrit's creativity and culinary acumen born of long experience are expressed in the every detail of each and every dish.",
+    "img": "asaf_granit.png"
   }
 }

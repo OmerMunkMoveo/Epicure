@@ -27,7 +27,7 @@ const Restaurant = (props: any) => {
 
     return (
         <Card className={`card column ${props.className}`}>
-            <img src={`Images/Restaurants/${String(props.data.img)}.png`} alt="restaurant"/>
+            <img src={`Images/Restaurants/${String(props.data.image)}.png`} alt="restaurant"/>
             <div className={`text_${props.className}`}>
                 <p className={`text_${props.className}_primary`}>
                     {props.data.name}
@@ -35,7 +35,7 @@ const Restaurant = (props: any) => {
 
                 {props.className==="restaurant_chef" &&<>
                     <p className={`text_${props.className}_secondary`}>
-                        {props.data.chef}
+                        {props.data.chef.name}
                     </p>
                     <div className="stars">
                         {stars}

@@ -1,0 +1,102 @@
+@keyframes cart_in {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+    display: flex;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    display: flex;
+  }
+}
+
+@keyframes cart_out {
+  0% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes modal_backdrop_in {
+  0% {
+    background-color: transparent;
+    opacity: 0;
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.67);
+  }
+}
+
+@keyframes modal_backdrop_out {
+  0% {
+    background-color: rgba(0, 0, 0, 0.67)
+  }
+  100% {
+    background-color: transparent;
+    opacity: 0;
+  }
+}
+
+
+@keyframes button_hover {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(3px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(0);
+  }
+  50% {
+    filter: blur(1px) ;
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+
+
+@keyframes input_focus {
+  0% {
+    transform: translateX(0);
+
+  }
+  25% {
+    transform: translateX(-30px) rotateZ(5deg) translateY(30px);
+
+  }
+  50% {
+    transform: translateX(10px) rotateZ(-2deg) translateY(-15px);
+
+  }
+  100% {
+    transform: translateX(0);
+
+  }
+}
+
+@keyframes headerIn {
+  0%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+
+

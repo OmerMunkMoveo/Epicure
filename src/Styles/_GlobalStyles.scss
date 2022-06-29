@@ -4,48 +4,109 @@ $secondary-color1: #F9F4EA;
 $secondary-color2: #E19D1A;
 $secondary-color3: #FAFAFA;
 
-@mixin mobile{
-  @media screen and (max-width: 600px) {@content}
-};
+$letter-spacing-1: 1.23px;
+$letter-spacing-2: 1.35px;
+$letter-spacing-3: 1.92px;
+$letter-spacing-4: 1.97px;
+$letter-spacing-5: 2.67px;
+
+
+$regular-weight: 200;
+$bold-weight: 400;
+$selected-bold-weight: 1000;
+
+a, button, NavLink{
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+
+@mixin mobile {
+  @media screen and (max-width: 600px) {
+    @content
+  }
+}
+
+;
+
+@mixin desktop {
+  @media screen and (min-width: 600px) {
+    @content
+  }
+}
+
+@mixin tablet1 {
+  @media screen and (min-width: 1100px) and (max-width: 1200px) {
+    @content
+  }
+}
+
+@mixin tablet2 {
+  @media screen and (min-width: 600px) and (max-width: 1099px) {
+    @content
+  }
+}
+
+@mixin tablet3 {
+  @media screen and (min-width: 601px) and (max-width: 1000px) {
+    @content
+  }
+}
+
+;
 
 .header {
 
   h1 {
     font-weight: 200;
-    font-size: 32px;
+    font-size: 24px;
     letter-spacing: 1.97px;
-    @include mobile{
-      font-size: 24px;
+    @include desktop {
+      font-size: 32px;
     }
   }
 
   h2 {
     font-weight: 200;
-    font-size: 30px;
+    font-size: 16px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
-    @include mobile{
-      font-size: 16px;
+    @include desktop {
+      font-size: 30px;
     }
   }
 
-  h3{
-    font-size: 40px;
+  h3 {
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: 2.67px;
-    @include mobile{
-      font-size: 18px;
+    @include desktop {
+      font-size: 40px;
     }
   }
 }
 
-.body_text{
-  font-size: 24px;
+.body_text {
+  font-size: 16px;
   font-weight: 200;
   letter-spacing: 1.97px;
-  @include mobile{
-    font-size: 16px;
+  @include desktop {
+    font-size: 24px;
   }
+}
+
+.helper_section_width_100 {
+  width: 100%;
+}
+
+.helper_header_align_center {
+  text-align: center;
+}
+
+.helper_div_sides {
+  width: 83.3%;
+  margin-left: 8.9%;
 }
 
 

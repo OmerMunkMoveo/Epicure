@@ -1,5 +1,8 @@
+
+
 html{
   font-family: Helvetica Neue;
+  scroll-behavior: smooth;
 }
 
 body {
