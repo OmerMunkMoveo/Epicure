@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.81f4ca75.css",
+    "main.js": "/static/js/main.2d0f7bbf.js",
+    "static/js/787.220fe630.chunk.js": "/static/js/787.220fe630.chunk.js",
+    "static/media/hero.png": "/static/media/hero.6444038bdfda96a1e2d8.png",
+    "static/media/epicure_logo.svg": "/static/media/epicure_logo.d01f135aece542c4e29e116996e3205d.svg",
+    "static/media/epicure_logo_text.svg": "/static/media/epicure_logo_text.9b95d58c2525812685529643704ba29d.svg",
+    "static/media/app_store.svg": "/static/media/app_store.e3e9050f1f706de191238ddab5c74079.svg",
+    "static/media/google_play.svg": "/static/media/google_play.bc0addafb62081ad52f3d3d56dd5a763.svg",
+    "static/media/spicy.svg": "/static/media/spicy.f371b34a27af8a6e41f3a8d8c2e30351.svg",
+    "static/media/vegitarian.svg": "/static/media/vegitarian.c7a8ac880abcb7232fa1c8b3c24dabe0.svg",
+    "static/media/user.svg": "/static/media/user.826ee09f080259ac53dbd4bca91b2c23.svg",
+    "static/media/vegan.svg": "/static/media/vegan.df6220a21bb8b68a675f4d7751c7a52e.svg",
+    "static/media/double_arrow.svg": "/static/media/double_arrow.355161ce7873735edb945155eac715b5.svg",
+    "static/media/search.svg": "/static/media/search.fb1025ff5183f6179ac857f56154c9dc.svg",
+    "static/media/down_arrow.svg": "/static/media/down_arrow.71c29ecc3a9ce7a027d83975f3a5c6af.svg",
+    "static/media/lock.svg": "/static/media/lock.d1da75723fd63c663bb518926dd703f5.svg",
+    "index.html": "/index.html",
+    "static/media/cart.svg": "/static/media/cart.6e8ee26076aa38da1737478b8076cd02.svg",
+    "static/media/star_blank.svg": "/static/media/star_blank.3eb6fa67b991e7be5648a2868b3f806c.svg",
+    "static/media/mobile_menu.svg": "/static/media/mobile_menu.c77e8f940165325814307898fa5255d7.svg",
+    "static/media/circle.svg": "/static/media/circle.7d2cf4177ac4b2b5a9436f8e085c94b7.svg",
+    "static/media/ils.svg": "/static/media/ils.899b0ff565910dd6e2e30b0fd955bfd9.svg",
+    "static/media/star_fill.svg": "/static/media/star_fill.7cc61ecbb24d40546dc72103887af5cf.svg",
+    "static/media/close.svg": "/static/media/close.e7d0dc3b8d8487fee1397aa75604153e.svg",
+    "main.81f4ca75.css.map": "/static/css/main.81f4ca75.css.map",
+    "main.2d0f7bbf.js.map": "/static/js/main.2d0f7bbf.js.map",
+    "787.220fe630.chunk.js.map": "/static/js/787.220fe630.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81f4ca75.css",
+    "static/js/main.2d0f7bbf.js"
+  ]
+}

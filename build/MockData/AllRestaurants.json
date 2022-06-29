@@ -1,0 +1,74 @@
+{
+  "1": {
+    "name": "claro",
+    "chef": "ran shmueli",
+    "img": "Claro",
+    "rating": 3,
+    "popular": "true",
+    "opened": "05/25/2022"
+  },
+  "2": {
+    "name": "lumina",
+    "chef": "meir adoni",
+    "img": "Lumina",
+    "rating": 2,
+    "popular": "true",
+    "opened": "05/25/2022"
+  },
+  "3": {
+    "name": "tiger lilly",
+    "chef": "yanir green",
+    "img": "Tiger_Lilly",
+    "rating": 4,
+    "popular": "true",
+    "opened": "5/1/2019"
+  },
+  "4": {
+    "name": "onza",
+    "chef": "yossi shitrit",
+    "img": "onza",
+    "rating": 5,
+    "popular": "false",
+    "opened": "05/28/2022"
+  },
+  "5": {
+    "name": "kitchen market",
+    "chef": "yossi shitrit",
+    "img": "kitchen_market",
+    "rating": 2,
+    "popular": "false",
+    "opened": "5/1/2019"
+  },
+  "6": {
+    "name": "mashya",
+    "chef": "yossi shitrit",
+    "img": "mashya",
+    "rating": 4,
+    "popular": "false",
+    "opened": "5/1/2019"
+  },
+  "7": {
+    "name": "kab kem",
+    "chef": "yariv malili",
+    "img": "kab_kem",
+    "rating": 1,
+    "popular": "false",
+    "opened": "5/1/2019"
+  },
+  "8": {
+    "name": "messa",
+    "chef": "aviv moshe",
+    "img": "messa",
+    "rating": 1,
+    "popular": "false",
+    "opened": "5/1/2019"
+  },
+  "9": {
+    "name": "nitan thai",
+    "chef": "shahaf shabtai",
+    "img": "nitan_thai",
+    "rating": 5,
+    "popular": "false",
+    "opened": "5/1/2012"
+  }
+}
