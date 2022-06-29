@@ -4,7 +4,7 @@
     "chef": "ran shmueli",
     "img": "Claro",
     "rating": 3,
-    "popular": "true",
+    "popular": "false",
     "opened": "05/25/2022"
   },
   "2": {
@@ -51,8 +51,8 @@
     "name": "kab kem",
     "chef": "yariv malili",
     "img": "kab_kem",
-    "rating": 1,
-    "popular": "false",
+    "rating": 5,
+    "popular": "true",
     "opened": "5/1/2019"
   },
   "8": {
@@ -60,7 +60,7 @@
     "chef": "aviv moshe",
     "img": "messa",
     "rating": 1,
-    "popular": "false",
+    "popular": "true",
     "opened": "5/1/2019"
   },
   "9": {

@@ -1,104 +1,117 @@
+@mixin text_restaurant_chef_primary (){
+  font-size: 18px;
+  font-weight: $bold-weight;
+  letter-spacing: $letter-spacing-5;
+  margin: 0;
+  padding: 3.5px;
+  @include desktop {
+    font-size: 40px;
+  }
+}
+
+
 .restaurant_chef {
   box-sizing: border-box;
-  width: 379px;
-  height: 404px;
+  width: auto;
+  height: auto;
+  padding: 0 12px;
 
-
-  img{
-    width: 379px;
-    height: 236px;
+  @include desktop {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0 12px;
   }
-  @include mobile{
-    width: 245px;
-    height: 233px;
+
+  img {
+    width: inherit;
+    height: inherit;
+    @include desktop {
+      width: inherit;
+      height: inherit;
+
+    }
   }
 
   .text_restaurant_chef {
     box-sizing: border-box;
     background-color: #F9F4EA;
-    height: 169px;
+    height: 81px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     text-transform: capitalize;
-
-
-    @include mobile{
-      height: 81px;
-      align-items: flex-start;
-      padding-left: 16px;
-
+    padding-left: 16px;
+    @include desktop {
+      height: 169px;
+      align-items: center;
+      padding-left: 0;
     }
 
-
     .text_restaurant_chef_primary {
-      font-size: 40px;
-      font-weight: 400;
-      letter-spacing: 2.67px;
-      margin: 0;
-      padding: 3.5px;
-      @include mobile{
-        font-size: 18px;
+      @include text_restaurant_chef_primary();
+      @include tablet3{
+        font-size: 22px;
       }
     }
 
+
     .text_restaurant_chef_secondary {
-      font-size: 24px;
-      font-weight: 200;
-      letter-spacing: 1.97px;
+      font-size: 16px;
+      font-weight: $regular-weight;
+      letter-spacing: $letter-spacing-4;
       margin: 0;
       padding: 3.5px;
-      @include mobile{
-        font-size: 16px;
+      @include desktop {
+        font-size: 24px;
+      }
+      @include tablet3{
+        font-size: 18px;
       }
     }
   }
 }
 
 
-.restaurant_chef_rated{
+.restaurant_chef_rated {
   width: 379px;
   height: 405px;
 
 
-
   .text_restaurant_chef {
     background-color: #F9F4EA;
-    height: 169px;
+    height: 81px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     text-transform: capitalize;
-    @include mobile{
-      height: 81px;
-      align-items: flex-start;
-      padding-left: 16px;
-
+    padding-left: 16px;
+    @include desktop {
+      height: 169px;
+      align-items: center;
+      padding: 0;
     }
+
 
 
     .text_restaurant_chef_primary {
-      font-size: 40px;
-      font-weight: 400;
-      letter-spacing: 2.67px;
-      margin: 0;
-      padding: 3.5px;
-      @include mobile{
-        font-size: 18px;
-      }
+      @include text_restaurant_chef_primary();
+
     }
+
 
     .text_restaurant_chef_secondary {
-      font-size: 24px;
-      font-weight: 200;
-      letter-spacing: 1.97px;
+      font-size: 16px;
+      font-weight: $regular-weight;
+      letter-spacing: $letter-spacing-4;
       margin: 0;
       padding: 3.5px;
-      @include mobile{
-        font-size: 16px;
+      @include desktop {
+        font-size: 24px;
       }
+
     }
 
   }
@@ -106,61 +119,82 @@
 }
 
 
-.restaurant{
-  width: 231px;
-  height: 357px;
-  margin-bottom: 90px;
-  @include mobile{
+.restaurant {
+  width: 245px;
+  height: 233px;
+  margin-bottom: 0;
+  @include desktop {
+    //width: 231px;
+    height: 357px;
+    margin-bottom: 90px;
+  }
+  @include tablet3{
+    width: 150px;
+    .text_restaurant{
+      .text_restaurant_primary{
+        font-size: 20px;
+
+      }
+    }
+  }
+
+  img {
+    position: relative;
     width: 245px;
-    height: 233px;
-    img{
-      position: relative;
-      width:245px;
-      height: 150px;
-      object-fit: cover;
-      //top:43px;
+    height: 150px;
+    object-fit: cover;
+    @include desktop {
+      width: inherit;
+
     }
+
+  }
+}
+
+.text_restaurant {
+  z-index: 1;
+  background-color: #F9F4EA;
+  height: 81px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  text-transform: capitalize;
+  @include desktop {
+    height: 133px;
+    align-items: center;
   }
 
-  .text_restaurant{
-    z-index: 1;
-    background-color: #F9F4EA;
-    height: 133px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-transform: capitalize;
-    @include mobile{
-      height: 81px;
-      align-items: flex-start;
-    }
 
-
-    .text_restaurant_primary{
-      text-align: center;
-      width: 100%;
+  .text_restaurant_primary {
+    text-align: center;
+    font-size: 18px;
+    font-weight: $bold-weight;
+    letter-spacing: $letter-spacing-5;
+    padding: 3.5px;
+    @include desktop {
       font-size: 30px;
-      font-weight: 400;
-      letter-spacing: 2.67px;
-      //margin: 0;
-      padding: 3.5px;
-      @include mobile{
-        font-size: 18px;
-        padding-left: 16px;
-      }
     }
   }
 }
 
-.stars{
+
+.stars {
+  display: none;
   padding: 0;
   margin: 0;
-  img{
+
+  img {
     width: 39px;
     height: 37px;
+    @include tablet3{
+      width: 20px;
+      height: 20px;
+    }
+  }
 
+  @include desktop {
+    display: flex;
   }
 }
-
 

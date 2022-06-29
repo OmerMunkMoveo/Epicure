@@ -1,9 +1,9 @@
 $button-hover-background: #515151;
 
 @mixin button($background-color, $font-color, $show-image) {
-  font-weight: 400;
+  font-weight: $bold-weight;
   font-size: 18px;
-  letter-spacing: 2.67px;
+  letter-spacing: $letter-spacing-5;
   color: $font-color;
   text-transform: uppercase;
   display: flex;
@@ -16,6 +16,8 @@ $button-hover-background: #515151;
   padding: 5px 10px;
   gap: 10px;
   border: 1px $primary-color1 solid;
+  transition-duration: 0.2s;
+
 
 
   .lock_icon {
@@ -36,6 +38,7 @@ $button-hover-background: #515151;
     }
   }
   &:hover {
+    transition-duration: 0.2s;
     background-color: $button-hover-background;
     cursor: pointer;
   }
@@ -70,8 +73,6 @@ $button-hover-background: #515151;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  //width: 226px;
-  //height: 35px;
   background-color: transparent;
   gap: 12px;
   padding: 0;
@@ -85,12 +86,12 @@ $button-hover-background: #515151;
     flex: none;
     order: 0;
     flex-grow: 0;
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: $bold-weight;
     letter-spacing: 2px;
     text-transform: capitalize;
-    @include mobile{
-      font-size: 16px;
+    @include desktop{
+      font-size: 24px;
     }
   }
   .arrow {
@@ -99,6 +100,26 @@ $button-hover-background: #515151;
     flex-grow: 0;
     background-color: $primary-color1;
 
+  }
+}
+
+.all_button{
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  padding-left: 24px;
+  @include desktop{
+    box-sizing: content-box;
+    justify-content: flex-end;
+    padding-left: 0;
+  }
+  &:hover{
+    animation-name: headShake;
+    animation-duration: 0.75s;
+    animation-iteration-count: 1;
+    animation-delay: 0.1s;
+    animation-play-state: running;
   }
 }
 

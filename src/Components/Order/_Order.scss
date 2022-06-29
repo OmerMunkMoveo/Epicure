@@ -21,15 +21,15 @@
     .order_text_primary {
       text-transform: capitalize;
       font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 2.67px;
+      font-weight: $bold-weight;
+      letter-spacing: $letter-spacing-5;
       text-align: center;
     }
 
     .order_text_secondary {
       font-size: 12px;
-      font-weight: 200;
-      letter-spacing: 1.23px;
+      font-weight: $regular-weight;
+      letter-spacing: $letter-spacing-1;
       text-align: center;
     }
 
@@ -47,8 +47,8 @@
         display: flex;
         align-items: center;
         font-size: 16px;
-        font-weight: 400;
-        letter-spacing: 1.97px;
+        font-weight: $bold-weight;
+        letter-spacing: $letter-spacing-4;
         text-align: center;
         justify-content: center;
 

@@ -1,14 +1,17 @@
 import React from "react"
 import Modal from "../UI/Modal/Modal";
 import Button from "../UI/Button/Button";
-import Card from "../UI/Card/Card";
 import CART from "../../Images/Icons/cart.svg"
+import ConfettiTest from "../ConfettiTest";
 
 const SideCart = (props: any) => {
 
+
+
     return (
         <>
-            <Modal toggleShow={props.sideCartToggle} className="modal side_cart">
+            <Modal active={props.showCart} toggleShow={props.sideCartToggle}
+                   className={`modal side_cart ${props.showCart ? 'show_cart' : 'hide_cart'}`}>
                 <img src={CART} alt="cart"/>
                 <p>
                     your bag is empty
