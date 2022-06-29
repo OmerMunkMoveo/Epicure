@@ -364,5 +364,23 @@ $border-button-width: 0.5px;
   }
 }
 
+.regular{
+  z-index: -1;
+  position: absolute;
+  left:8%;
+  margin-top: 40px;
+  opacity: 0.5;
+  transition-duration: 0.3s;
+}
 
 
+.up{
+  position: absolute;
+  transition-duration: 0.3s;
+  left:8%;
+  font-size: 14px;
+  margin-top: 8px;
+
+
+
+}

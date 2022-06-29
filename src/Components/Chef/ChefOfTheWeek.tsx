@@ -10,7 +10,6 @@ const ChefOfTheWeek = () => {
     const getChef = () => {
         axios.get(`${serverURL}/chefs/chef_of_the_week`).then((res: any) => {
             const result = res.data.data.chef
-            console.log(result)
 
             const chefToRender: ChefModel = {
                 name: result.name,
@@ -19,8 +18,6 @@ const ChefOfTheWeek = () => {
                 chefOfTheWeek: result.chefOfTheWeek
             }
             setChef(chefToRender)
-
-
         }).catch((err) => {
             console.log(err)
         })
