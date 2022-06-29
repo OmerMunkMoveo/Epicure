@@ -14,7 +14,7 @@ const Restaurants = (props: any) => {
 
     const now = Date.now();
 
-    const {width, height} = useWindowDimensions();
+    const {width} = useWindowDimensions();
     const [restaurants, setRestaurants] = useState<any>();
     const [carouselSlidesToShow, setCarouselSlidesToShow] = useState(1);
 
