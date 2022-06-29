@@ -17,7 +17,6 @@ const SideCart = (props: any) => {
                     your bag is empty
                 </p>
                 <Button className="secondary_button">order history</Button>
-                <ConfettiTest/>
 
             </Modal>
         </>

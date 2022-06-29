@@ -886,8 +886,8 @@ a:hover, button:hover, NavLink:hover {
 }
 @media screen and (min-width: 600px) {
   .chef_of_the_week_info .chef_of_the_week_image img {
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 373px;
   }
 }
 
