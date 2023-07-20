@@ -47,11 +47,13 @@ $button-hover-background: #515151;
 
 
 .primary_button {
-  @include button($primary-color1, white, block)
+  @include button($primary-color1, white, none);
+
+
 }
 
 .primary_button_lock {
-  @include button($primary-color1, white, none)
+  @include button($primary-color1, white, block);
 }
 
 
@@ -123,6 +125,21 @@ $button-hover-background: #515151;
   }
 }
 
+.text_only{
+  img{
+    display: none;
+  }
+}
+
+.close{
+  padding-top: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+
+
+}
 
 
 

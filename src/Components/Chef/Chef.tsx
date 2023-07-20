@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import Card from "../UI/Card/Card";
-import {Chef as ChefModel} from "../../Interfaces/Chef" ;
 
 const Chef = (props: any) => {
     const [chef, setChef] = useState<any>(props.chef);

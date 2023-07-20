@@ -5,9 +5,9 @@ import Restaurants from "./Restaurants";
 
 const RestaurantsPage = () => {
     const [restaurantsView, setRestaurantsView] = useState<string>('all');
-    const [restaurantsPriceFilter, setRestaurantsPriceFilter] = useState<string>()
-    const [restaurantsDistanceFilter, setRestaurantsDistanceFilter] = useState<number>()
-    const [restaurantsRatingFilter, setRestaurantsRatingFilter] = useState<number>()
+    // const [restaurantsPriceFilter, setRestaurantsPriceFilter] = useState<string>()
+    // const [restaurantsDistanceFilter, setRestaurantsDistanceFilter] = useState<number>()
+    // const [restaurantsRatingFilter, setRestaurantsRatingFilter] = useState<number>()
     const views = ['all', 'new', 'most popular', 'open now', 'map view'];
 
 

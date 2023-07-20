@@ -81,13 +81,13 @@ a:hover, button:hover, NavLink:hover {
 }
 .primary_button .lock_icon {
   position: relative;
-  display: block;
+  display: none;
 }
 .primary_button .lock_icon .lock {
-  display: block;
+  display: none;
 }
 .primary_button .lock_icon .circle {
-  display: block;
+  display: none;
   position: absolute;
   left: 29.37%;
   right: 42.42%;
@@ -120,13 +120,13 @@ a:hover, button:hover, NavLink:hover {
 }
 .primary_button_lock .lock_icon {
   position: relative;
-  display: none;
+  display: block;
 }
 .primary_button_lock .lock_icon .lock {
-  display: none;
+  display: block;
 }
 .primary_button_lock .lock_icon .circle {
-  display: none;
+  display: block;
   position: absolute;
   left: 29.37%;
   right: 42.42%;
@@ -237,6 +237,18 @@ a:hover, button:hover, NavLink:hover {
   animation-iteration-count: 1;
   animation-delay: 0.1s;
   animation-play-state: running;
+}
+
+.text_only img {
+  display: none;
+}
+
+.close {
+  padding-top: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .search_bar {
@@ -563,6 +575,23 @@ a:hover, button:hover, NavLink:hover {
 }
 .search_dropdown li:hover {
   background-color: rgba(0, 172, 255, 0.2);
+}
+
+.regular {
+  z-index: -1;
+  position: absolute;
+  left: 8%;
+  margin-top: 40px;
+  opacity: 0.5;
+  transition-duration: 0.3s;
+}
+
+.up {
+  position: absolute;
+  transition-duration: 0.3s;
+  left: 8%;
+  font-size: 14px;
+  margin-top: 8px;
 }
 
 .card {
@@ -899,7 +928,7 @@ a:hover, button:hover, NavLink:hover {
   align-items: center;
   width: 100%;
   height: 273px;
-  background-image: url("../../public/Images/hero.png");
+  background-image: url("../Images/hero.png");
   background-size: cover;
 }
 @media screen and (min-width: 600px) {
@@ -2240,23 +2269,26 @@ a:hover, button:hover, NavLink:hover {
   }
 }
 .side_cart img {
-  position: absolute;
-  left: 167px;
-  top: 63px;
+  position: relative;
+  margin: auto;
+  padding-left: 45px;
+  top: -20px;
   width: 45px;
   opacity: 0.5;
 }
 @media screen and (min-width: 600px) {
   .side_cart img {
+    position: absolute;
     left: 224px;
     top: 243px;
     width: 49px;
+    padding-left: 0;
   }
 }
 .side_cart p {
-  position: absolute;
-  left: 117px;
-  bottom: 45px;
+  position: relative;
+  margin: auto;
+  bottom: 15px;
   width: 145px;
   font-weight: 200;
   text-align: center;
@@ -2266,6 +2298,7 @@ a:hover, button:hover, NavLink:hover {
 }
 @media screen and (min-width: 600px) {
   .side_cart p {
+    position: absolute;
     left: 188px;
     bottom: 224px;
     width: 121px;
@@ -2438,6 +2471,87 @@ a:hover, button:hover, NavLink:hover {
   100% {
     opacity: 1;
   }
+}
+.main_login {
+  transition-duration: 0.3s;
+  z-index: 10;
+  height: 636px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  position: absolute;
+  top: -15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.main_login input {
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  height: 52px;
+  width: 85%;
+  border: none;
+  border-bottom: 0.5px solid black;
+  outline: none;
+  transition-duration: 0.3s;
+  font-size: 20px;
+  font-weight: 200;
+}
+.main_login input:focus {
+  border-bottom: 1.5px solid black;
+  transition-duration: 0.3s;
+}
+.main_login h3 {
+  transform: scale(1.5);
+}
+.main_login h2 {
+  transform: scale(0.9);
+}
+
+.hide_login {
+  display: flex;
+  transition-duration: 0.3s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.sign_up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15%;
+  gap: 10px;
+}
+.sign_up h1 {
+  text-align: center;
+}
+.sign_up input {
+  width: 90%;
+  height: 30px;
+  border: 0.5px solid rgba(0, 0, 0, 0.13);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.74);
+  outline-color: #bba306;
+  transition-duration: 0.2s;
+}
+.sign_up input:focus {
+  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.24);
+  transition-duration: 0.2s;
+}
+.sign_up label {
+  width: 90%;
+}
+
+.user_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
 }
 
 /*# sourceMappingURL=Style.css.map */

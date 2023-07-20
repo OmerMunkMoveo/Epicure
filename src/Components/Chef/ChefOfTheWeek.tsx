@@ -1,17 +1,15 @@
 import React, {useEffect, useState} from "react";
 import Card from "../UI/Card/Card";
 import Chef from "./Chef";
-import Restaurants from "../Restaurants/Restaurants";
 import {Chef as ChefModel} from "../../Interfaces/Chef";
 import axios from "axios";
 import {serverURL} from "../../utils/urls";
 
-const ChefOfTheWeek = (props: any) => {
+const ChefOfTheWeek = () => {
     const [chef, setChef] = useState<any>();
     const getChef = () => {
         axios.get(`${serverURL}/chefs/chef_of_the_week`).then((res: any) => {
             const result = res.data.data.chef
-            console.log(result)
 
             const chefToRender: ChefModel = {
                 name: result.name,
@@ -20,8 +18,6 @@ const ChefOfTheWeek = (props: any) => {
                 chefOfTheWeek: result.chefOfTheWeek
             }
             setChef(chefToRender)
-
-
         }).catch((err) => {
             console.log(err)
         })
@@ -31,7 +27,7 @@ const ChefOfTheWeek = (props: any) => {
     useEffect(() => {
         getChef();
 
-    }, [,])
+    }, [])
 
     return (
         <Card className="card column chef_of_the_week_section">

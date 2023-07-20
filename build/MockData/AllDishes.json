@@ -1,0 +1,27 @@
+{
+  "1": {
+    "name": "pad ki mao",
+    "description": "Green Papaya, Mango, Chukka Chili, Mint, Kaffir lime, Cashew, Akaya Cham sauce",
+    "img": "pad_ki_mao_3",
+    "price": "65",
+    "properties": {
+      "1": "spicy"
+    }
+  },
+  "2": {
+    "name": "garbanzo frito",
+    "description": "Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa",
+    "img": "garbanzo_frito",
+    "price": "98",
+    "properties": {}
+  },
+  "3": {
+    "name": "smoked pizza",
+    "description": "Basil dough, cashew \"butter\", demi-glace, bison & radish",
+    "img": "smoked_pizza",
+    "price": "65",
+    "properties": {
+      "1": "vegan"
+    }
+  }
+}

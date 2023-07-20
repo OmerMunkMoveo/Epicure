@@ -1,0 +1,32 @@
+.sign_up{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15%;
+  gap: 10px;
+
+  h1{
+    text-align: center;
+  }
+
+  input{
+    width: 90%;
+    height: 30px;
+    border: 0.5px solid rgba(0, 0, 0, 0.13);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.74);
+    outline-color: #bba306;
+    transition-duration: 0.2s;
+
+    &:focus{
+      box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.24);
+      transition-duration: 0.2s;
+    }
+  }
+
+  label{
+    width: 90%;
+  }
+}

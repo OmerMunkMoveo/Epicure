@@ -1,0 +1,53 @@
+.main_login {
+  transition-duration: 0.3s;
+
+  z-index: 10;
+  height: 636px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  position: absolute;
+  top: -15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+
+  input {
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    height: 52px;
+    width: 85%;
+    border: none;
+    border-bottom: 0.5px solid black;
+    outline: none;
+    transition-duration: 0.3s;
+    font-size: 20px;
+    font-weight: 200;
+
+
+    &:focus {
+      border-bottom: 1.5px solid black;
+      transition-duration: 0.3s;
+    }
+
+  }
+
+  h3{
+    transform: scale(1.5);
+  }
+  h2 {
+    transform: scale(0.9);
+  }
+}
+
+
+.hide_login{
+  display: flex;
+  transition-duration: 0.3s;
+  opacity: 0;
+  position: absolute;
+  top:0;
+  z-index: -1;
+}

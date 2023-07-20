@@ -13,7 +13,6 @@ const Navigation = (props: any) => {
     const [showSearch, setShowSearch] = useState<boolean>(false);
 
     const mobileMenuRef = useRef<any>()
-    console.log(props.activePage)
 
     return (
         <>
@@ -54,9 +53,17 @@ const Navigation = (props: any) => {
 
                         <img className="search_logo" src={SEARCH} alt="search"/>
                     </a>
-                    <NavLink to='/user'>
-                        <img src={USER} alt="user"/>
-                    </NavLink>
+                    {props.isLogged?
+                        <NavLink to='/user'>
+                            <img src={USER} alt="user"/>
+                        </NavLink>
+                        :
+                        <a onClick={props.toggleShowLoginModal} href="#">
+                            <img src={USER} alt="user"/>
+                        </a>
+                    }
+
+
                     <a onClick={props.sideCartToggle}>
                         <img src={CART} alt="cart"/>
 
